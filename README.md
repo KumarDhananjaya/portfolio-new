@@ -1,176 +1,87 @@
-# Kumar Dhananjaya - Portfolio Website
+# 🚀 Next-Level Engineering Portfolio
 
-A modern, responsive personal portfolio website built with Next.js 15, Tailwind CSS, and Framer Motion.
+A high-tech, premium developer showcase designed for "System Architects" and "Digital Architects." This portfolio features a sophisticated **Midnight & Neon Cyan/Emerald** aesthetic, advanced interactive 3D elements, and a high-performance Bento Grid layout.
 
-![Portfolio Preview](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?style=for-the-badge&logo=tailwind-css)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-ff0055?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-## ✨ Features
+---
 
-- 🎨 **Premium Design**: Glassmorphism effects, gradient backgrounds, and smooth animations
-- 📱 **Fully Responsive**: Optimized for mobile, tablet, and desktop
-- ⚡ **Fast Performance**: Built with Next.js 15 App Router for optimal speed
-- 🎭 **Smooth Animations**: Framer Motion for delightful user interactions
-- 📝 **Contact Form**: React Hook Form with Zod validation
-- 🎯 **SEO Optimized**: Meta tags, Open Graph, and Twitter cards
-- 🌙 **Dark Theme**: Modern dark mode design with custom scrollbar
+## ✨ Next-Level Features
+
+- 🌌 **Midnight High-Tech UI**: A proprietary color scheme (Midnight background, Neon Cyan, and Emerald accents).
+- 🍱 **Premium Bento Grid**: A sophisticated "Engineering Profile" section for high-density information display.
+- 🧊 **3D Interactive Showcases**: Interactive "Production Artifact" cards with high-fidelity mouse-tracked 3D tilt effects.
+- ⏳ **Scroll-Reveal Timeline**: A precise vertical career timeline with animated nodes and scroll-triggered content reveal.
+- 🎇 **Atmospheric Effects**: Dynamic background glows, mesh gradients, and a high-tech grid pattern that responds to interaction.
+- ⚡ **Turbo-Charged Performance**: Optimized with Next.js 15 App Router and `framer-motion` for 60fps animations.
 
 ## 🚀 Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Form Handling**: React Hook Form + Zod
-- **Icons**: Lucide React
-- **Fonts**: Inter & Space Grotesk (Google Fonts)
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Custom Design System)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) (3D Tilt, Parallax, Reveal)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Validation**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Typography**: Space Grotesk (Heading) & Inter (Body)
 
-## 📦 Installation
+## 📦 Getting Started
 
-1. **Clone the repository**
+1. **Clone & Enter**
    ```bash
    git clone https://github.com/KumarDhananjaya/portfolio-new.git
    cd portfolio-new
    ```
 
-2. **Install dependencies**
+2. **Setup Dependencies**
    ```bash
    npm install
    ```
 
-3. **Run the development server**
+3. **Launch Terminal**
    ```bash
    npm run dev
    ```
 
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+## 📁 System Architecture
 
-## 🛠️ Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
-
-## 📁 Project Structure
-
-```
+```text
 portfolio-new/
 ├── app/
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── page.tsx            # Main page
-│   └── globals.css         # Global styles
+│   ├── layout.tsx          # System-wide meta & providers
+│   ├── page.tsx            # Main assembly point
+│   └── globals.css         # Global design tokens & mesh gradients
 ├── components/
-│   ├── ui/
-│   │   ├── Button.tsx      # Reusable button component
-│   │   ├── Card.tsx        # Card with glassmorphism
-│   │   └── SectionHeading.tsx
+│   ├── ui/                 # Atomic design components (Button, Card, SectionHeading)
 │   ├── sections/
-│   │   ├── Hero.tsx        # Hero section
-│   │   ├── About.tsx       # About section
-│   │   ├── Experience.tsx  # Work experience
-│   │   ├── Projects.tsx    # Featured projects
-│   │   ├── SocialBanner.tsx # Social links
-│   │   └── Contact.tsx     # Contact form
-│   ├── Header.tsx          # Navigation header
-│   └── Footer.tsx          # Footer
+│   │   ├── Hero.tsx        # Parallax typography & particle background
+│   │   ├── About.tsx       # Next-Level Bento Grid
+│   │   ├── Projects.tsx    # 3D Tilt interactive carousel
+│   │   ├── Experience.tsx  # Scroll-reveal timeline
+│   │   └── Contact.tsx     # Secure Channel form
+│   └── Header.tsx          # Floating Glass navigation
 ├── lib/
-│   └── constants.ts        # Site data and content
-├── tailwind.config.ts      # Tailwind configuration
-└── next.config.js          # Next.js configuration
+│   └── constants.ts        # Single source of truth for site data
+└── types/                  # Global type definitions
 ```
 
-## 🎨 Customization
+## 🛠️ Calibration
 
-### Update Personal Information
+### Identity Update
+Modify `lib/constants.ts` to calibrate your professional identity, projects, and trajectory.
 
-Edit `lib/constants.ts` to update:
-- Personal info (name, title, bio)
-- Social media links
-- Work experience
-- Projects
-- Skills and technologies
+### Theme Engineering
+Modify `tailwind.config.ts` and `app/globals.css` to adjust the neon intensity, color gradients, and animation timing.
 
-### Modify Colors
-
-Edit `tailwind.config.ts` to change:
-- Color palette
-- Animations
-- Typography
-
-### Add New Sections
-
-1. Create a new component in `components/sections/`
-2. Import and add it to `app/page.tsx`
-
-## 🚀 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-
-2. **Import to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Import your GitHub repository
-   - Vercel will auto-detect Next.js and configure settings
-   - Click "Deploy"
-
-3. **Done!** Your site will be live at `your-project.vercel.app`
-
-### Custom Domain
-
-1. Go to your Vercel project settings
-2. Navigate to "Domains"
-3. Add your custom domain
-4. Update DNS records as instructed
-
-## 📧 Contact Form Setup
-
-The contact form currently logs to console. To make it functional:
-
-1. **Option 1: Email Service (EmailJS)**
-   ```bash
-   npm install @emailjs/browser
-   ```
-   Update `components/sections/Contact.tsx` with EmailJS configuration
-
-2. **Option 2: API Route**
-   Create `app/api/contact/route.ts` and integrate with your email service
-
-3. **Option 3: Form Service**
-   Use services like Formspree, Getform, or Web3Forms
-
-## 🎯 Performance
-
-- Lighthouse Score: 95+
-- First Contentful Paint: < 1.5s
-- Time to Interactive: < 3s
-- Optimized images and fonts
-- Minimal JavaScript bundle
-
-## 📄 License
-
-MIT License - feel free to use this template for your own portfolio!
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-## 👨‍💻 Author
+## 👨‍💻 Engineering Lead
 
 **Kumar Dhananjaya**
-- LinkedIn: [@kumardhananjaya](https://www.linkedin.com/in/kumardhananjaya/)
-- GitHub: [@KumarDhananjaya](https://github.com/KumarDhananjaya)
-- Twitter: [@SKumarDhananjay](https://twitter.com/SKumarDhananjay)
+- [LinkedIn](https://www.linkedin.com/in/kumardhananjaya/)
+- [GitHub](https://github.com/KumarDhananjaya)
+- [Hashnode](https://kdexplorations.hashnode.dev)
 
 ---
 
-⭐ If you found this helpful, please give it a star!
+⭐ **Star this repository if you find it useful in building your engineering presence!**
