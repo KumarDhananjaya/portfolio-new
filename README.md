@@ -1,4 +1,4 @@
-# 🚀 Next-Level Engineering Portfolio
+# 🚀 Portfolio
 
 A high-tech, premium developer showcase designed for "System Architects" and "Digital Architects." This portfolio features a sophisticated **Midnight & Neon Cyan/Emerald** aesthetic, advanced interactive 3D elements, and a high-performance Bento Grid layout.
 
@@ -9,7 +9,7 @@ A high-tech, premium developer showcase designed for "System Architects" and "Di
 
 ---
 
-## ✨ Next-Level Features
+## ✨ Features
 
 - 🌌 **Midnight High-Tech UI**: A proprietary color scheme (Midnight background, Neon Cyan, and Emerald accents).
 - 🍱 **Premium Bento Grid**: A sophisticated "Engineering Profile" section for high-density information display.
@@ -67,15 +67,6 @@ portfolio-new/
 └── types/                  # Global type definitions
 ```
 
-## 🛠️ Calibration
-
-### Identity Update
-Modify `lib/constants.ts` to calibrate your professional identity, projects, and trajectory.
-
-### Theme Engineering
-Modify `tailwind.config.ts` and `app/globals.css` to adjust the neon intensity, color gradients, and animation timing.
-
-## 👨‍💻 Engineering Lead
 
 **Kumar Dhananjaya**
 - [LinkedIn](https://www.linkedin.com/in/kumardhananjaya/)
