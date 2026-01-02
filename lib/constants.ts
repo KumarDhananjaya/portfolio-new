@@ -1,16 +1,16 @@
 export const PERSONAL_INFO = {
     name: "Kumar Dhananjaya",
     title: "Associate Software Engineer",
-    subtitle: "Full-Stack Web & Mobile Developer",
+    subtitle: "Full-Stack Web & Mobile Developer | Cloud Security Enthusiast",
     location: "Karnataka, India",
     email: "kumar62.shivu@gmail.com",
     phone: "+91-9743086802",
-    tagline: "Code with purpose. Build with vision.",
-    bio: `Hey there! I'm Kumar Dhananjaya, an Associate Software Engineer passionate about building scalable, real-time applications and mobile experiences. With expertise in the MERN stack, React Native, and DevOps, I love turning complex problems into elegant solutions.
+    tagline: "Building scalable distributed systems with a focus on Zero-Trust security.",
+    bio: `Hey there! I'm Kumar Dhananjaya, an Associate Software Engineer passionate about building scalable, high-concurrency applications and secure cloud-native experiences. With expertise in the MERN stack, React Native, and DevSecOps, I focus on turning complex technical challenges into robust, production-ready solutions.
 
-I've architected high-availability platforms on Azure, developed cross-platform mobile apps, and led technical communities as President of Clusteroids and ACES clubs. When I'm not coding, you'll find me exploring new technologies, participating in hackathons (2nd prize at HPE SWARM-IT!), or sharing knowledge through my blog.
+I've architected high-availability platforms on Azure, engineered distributed systems capable of handling 100k+ RPS, and implemented comprehensive Zero-Trust security pipelines. I'm deeply interested in distributed systems, CRDTs for real-time collaboration, and the intersection of DevOps and Security.
 
-Let's build something awesome together! 🚀`,
+When I'm not architecting systems, you'll find me exploring new tech stacks (currently delving into Golang and NestJS), participating in national-level hackathons (2nd prize at HPE SWARM-IT!), or sharing my journey and insights through my technical blog at kdexplorations.hashnode.dev.`,
 };
 
 export const SOCIAL_LINKS = {
@@ -22,10 +22,11 @@ export const SOCIAL_LINKS = {
 };
 
 export const SKILLS = {
-    languages: ["JavaScript", "TypeScript", "Java", "Python", "C/C++", "Golang"],
-    frontend: ["React", "Next.js", "React Native", "Redux", "HTML", "CSS"],
-    backend: ["Node.js", "Express", "Spring Boot", "MongoDB", "PostgreSQL", "MySQL", "REST APIs", "GraphQL", "WebSockets", "gRPC"],
-    devops: ["Azure", "Docker", "Kubernetes", "NGINX", "CI/CD", "GitHub Actions", "Azure DevOps", "Git", "Terraform"],
+    languages: ["JavaScript", "TypeScript", "Java", "Python", "Golang", "C/C++", "Dart"],
+    frontend: ["React", "Next.js", "React Native", "Flutter", "Redux", "Tailwind CSS", "Framer Motion"],
+    backend: ["Node.js", "Express", "NestJS", "Spring Boot", "Kafka", "Redis (Lua scripting)", "WebSockets", "gRPC"],
+    "DevOps & Security": ["Azure", "Docker", "Kubernetes", "NGINX", "CI/CD", "GitHub Actions", "Terraform", "OPA Gatekeeper", "HashiCorp Vault", "Trivy", "Falco"],
+    databases: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
 };
 
 export const EXPERIENCE = [
@@ -70,48 +71,68 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
-        title: "Real-Time Chat Application",
-        description: "Real-time chat application with WebSocket support for instant messaging, user presence indicators, and message history.",
-        technologies: ["TypeScript", "gRPC", "React", "Golang", "PostgreSQL", "REST APIs", "JWT"],
-        github: "https://github.com/KumarDhananjaya/realtime-chat",
-        featured: false,
-    },
-    {
-        title: "ConnectX - Real-Time Social Platform",
-        description: "Engineered a full-stack social media platform implementing real-time features (chat, notifications) via WebSockets. Designed secure user authentication/authorization using JWT and optimized MongoDB indexing for efficient data retrieval under simulated load (100+ concurrent users).",
-        technologies: ["Node.js", "React", "MongoDB", "WebSockets", "JWT", "Redux"],
-        github: "https://github.com/KumarDhananjaya/ConnectX",
+        title: "Flux-Gate",
+        description: "High-concurrency distributed flash sale engine handling 100k+ RPS with zero overselling. Utilizes Redis Lua scripts for atomicity and Kafka for asynchronous processing.",
+        technologies: ["Node.js", "Redis", "Kafka", "PostgreSQL", "Distributed Systems"],
+        github: "https://github.com/KumarDhananjaya/Flux-Gate",
         featured: true,
     },
     {
-        title: "Hotel Management System",
-        description: "Full-stack hotel management application with comprehensive CRUD operations for guests, rooms, and bookings. Features role-based access control, real-time availability tracking, and responsive admin dashboard.",
-        technologies: ["JavaScript", "React", "Node.js", "MongoDB", "Express"],
-        github: "https://github.com/KumarDhananjaya/hotel-management-system",
+        title: "Zero-Trust API Platform",
+        description: "Cloud-native platform implementing OAuth2, RBAC/ABAC, and automated security scanning. Integrated with OPA Gatekeeper for policy enforcement and Trivy for container auditing.",
+        technologies: ["Docker", "Kubernetes", "OPA", "NestJS", "PostgreSQL", "Vault"],
+        github: "https://github.com/KumarDhananjaya/Zero-Trust-Secure-API-Platform",
+        featured: true,
+    },
+    {
+        title: "The Ironclad Pipeline",
+        description: "Zero-Trust software supply chain implementing shift-left security. Features secret scanning, SAST, container scanning, and image signing with Sigstore.",
+        technologies: ["Gitleaks", "SonarQube", "Trivy", "Sigstore", "Jenkins", "Falco"],
+        github: "https://github.com/KumarDhananjaya/Ironclad-Pipeline",
+        featured: true,
+    },
+    {
+        title: "Real-Time Collaborative Editor",
+        description: "Multi-user text editor using CRDTs (Yjs) for conflict-free synchronization. Features real-time cursors, presence indicators, and document versioning.",
+        technologies: ["React", "WebSockets", "Node.js", "CRDTs", "Redis"],
+        github: "https://github.com/KumarDhananjaya/realtime-collaborative-text-editor",
         featured: true,
     },
     {
         title: "Clusteroids - College Management App",
-        description: "College management app that simplifies student, faculty, and course administration, enhancing departmental efficiency. Built with Flutter for cross-platform mobile experience.",
+        description: "Comprehensive mobile app for streamlining academic administrative tasks. Achieved high engagement within the college community with sub-second performance.",
         technologies: ["Flutter", "Dart", "Firebase"],
         github: "https://github.com/KumarDhananjaya/Clusteroids",
         featured: true,
     },
     {
-        title: "MITT App - Official College Mobile App",
-        description: "Developed and launched the official college Android application, achieving adoption by 300+ active users. Implemented real-time push notifications (FCM) for critical updates and seamless data access, reducing information lag by 50%+.",
-        technologies: ["Java", "Android SDK", "Firebase", "FCM"],
-        github: "#",
-        featured: true,
+        title: "ConnectX - Social Platform",
+        description: "Full-stack social media implementing notifications, private messaging, and content feeds. Optimized for mobile responsiveness and performance.",
+        technologies: ["MERN Stack", "WebSockets", "Redux", "JWT"],
+        github: "https://github.com/KumarDhananjaya/ConnectX",
+        featured: false,
+    },
+    {
+        title: "Hospify - Hotel Management",
+        description: "Enterprise-grade hotel operations system with role-based access control and real-time inventory management.",
+        technologies: ["Spring Boot", "React", "PostgreSQL", "Docker"],
+        github: "https://github.com/KumarDhananjaya/Hospify",
+        featured: false,
     },
     {
         title: "Sorting Visualizer",
-        description: "Interactive sorting visualizer that demonstrates various sorting algorithms. Using React and TypeScript, it offers real-time animations and detailed explanations of each algorithm's working.",
-        technologies: ["React", "TypeScript", "Algorithms"],
+        description: "Interactive visualizer for various sorting algorithms (Bubble, Merge, Quick, etc.). Helps in understanding algorithmic complexity and pathfinding visually.",
+        technologies: ["React", "TypeScript", "Algorithms", "CSS Animations"],
         github: "https://github.com/KumarDhananjaya/Sorting-Visualizer",
         featured: false,
     },
-
+    {
+        title: "MITT App - Official College App",
+        description: "Launched the official college Android application, used by 300+ active users. Integrated real-time push notifications and student resource hub.",
+        technologies: ["Java", "Android SDK", "Firebase", "SQLite"],
+        github: "#",
+        featured: false,
+    },
 ];
 
 export const ACHIEVEMENTS = [

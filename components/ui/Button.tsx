@@ -25,16 +25,16 @@ export const Button: React.FC<ButtonProps> = ({
 
     const variants = {
         primary:
-            'bg-gradient-to-r from-purple-600 to-cyan-500 text-white shadow-lg ' +
-            'hover:shadow-2xl hover:from-purple-700 hover:to-cyan-600 active:scale-95',
+            'bg-gradient-to-r from-cyan-600 to-emerald-500 text-white shadow-lg ' +
+            'hover:shadow-2xl hover:from-cyan-700 hover:to-emerald-600 active:scale-95',
 
         secondary:
             'bg-white/10 hover:bg-white/20 text-white border border-white/20 ' +
             'hover:border-white/40 backdrop-blur-sm active:scale-95',
 
         outline:
-            'border border-purple-400 text-purple-300 hover:bg-purple-500/10 ' +
-            'hover:border-purple-300 active:scale-95',
+            'border border-cyan-400 text-cyan-300 hover:bg-cyan-500/10 ' +
+            'hover:border-cyan-300 active:scale-95',
     };
 
     const MotionA = motion.a;

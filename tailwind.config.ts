@@ -19,14 +19,21 @@ const config: Config = {
           400: '#38bdf8',
           500: '#0ea5e9',
           600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          DEFAULT: '#06b6d4',
+          foreground: '#f8fafc',
         },
         accent: {
-          purple: '#a855f7',
-          pink: '#ec4899',
+          DEFAULT: '#06b6d4', // Cyan
+          foreground: '#f8fafc',
+        },
+        secondary: {
+          DEFAULT: '#10b981', // Emerald
+          foreground: '#f8fafc',
+        },
+        neon: {
           cyan: '#06b6d4',
+          emerald: '#10b981',
+          blue: '#3b82f6',
         }
       },
       fontFamily: {

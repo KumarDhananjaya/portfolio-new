@@ -5,122 +5,142 @@ import { motion } from 'framer-motion';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/Card';
 import { PERSONAL_INFO, SKILLS } from '@/lib/constants';
-import { Code2, Rocket, Award } from 'lucide-react';
+import { Code2, Rocket, Award, ShieldCheck } from 'lucide-react';
 
 export const About: React.FC = () => {
     return (
         <section
             id="about"
-            className="w-full py-20 md:py-28 lg:py-32 px-6 flex justify-center"
+            className="w-full py-20 md:py-32 px-6 flex justify-center relative overflow-hidden bg-[#020617]"
         >
-            <div className="w-full max-w-[1100px] mx-auto mt-6 text-center">
+            {/* Background Glows */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-20 pointer-events-none">
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px]"></div>
+            </div>
 
-                <SectionHeading subtitle="Get to know me better">
-                    About Me
+            <div className="w-full max-w-[1300px] mx-auto relative z-10">
+                <SectionHeading subtitle="Architecting secure, high-scale digital ecosystems">
+                    Engineering Profile
                 </SectionHeading>
 
-                {/* Content Wrapper */}
-                <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center mt-12">
+                {/* Bento Grid Container */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-16">
 
-                    {/* BIO — centered perfectly */}
+                    {/* Main Bio Card — Large (8 cols) */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="flex flex-col items-center md:items-start text-center md:text-left px-2"
+                        className="md:col-span-8 group relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 backdrop-blur-md hover:border-cyan-500/30 transition-all duration-500"
                     >
-                        <div className="max-w-[480px] mx-auto">
-                            {PERSONAL_INFO.bio.split('\n\n').map((paragraph, index) => (
-                                <p
-                                    key={index}
-                                    className="text-gray-300 text-lg leading-relaxed mb-4"
-                                >
-                                    {paragraph}
-                                </p>
+                        <div className="relative z-10 h-full flex flex-col">
+                            <h3 className="text-3xl font-bold mb-6 text-white group-hover:text-cyan-400 transition-colors">Digital Architect</h3>
+                            <div className="space-y-4">
+                                {PERSONAL_INFO.bio.split('\n\n').map((paragraph, index) => (
+                                    <p key={index} className="text-gray-400 text-lg leading-relaxed">
+                                        {paragraph}
+                                    </p>
+                                ))}
+                            </div>
+                        </div>
+                        {/* Decorative Gradient Line */}
+                        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+                    </motion.div>
+
+                    {/* Quick Info Grid — Small (4 cols) */}
+                    <div className="md:col-span-4 grid grid-cols-1 gap-6">
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="rounded-3xl bg-white/5 border border-white/10 p-6 backdrop-blur-md hover:border-emerald-500/30 transition-all group"
+                        >
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="p-3 bg-emerald-500/10 rounded-2xl group-hover:scale-110 transition-transform">
+                                    <Award className="text-emerald-400" size={24} />
+                                </div>
+                                <h4 className="text-lg font-bold">Innovation Prize</h4>
+                            </div>
+                            <p className="text-gray-400 text-sm">HPE SWARM-IT Hackathon — National 2nd Prize for Swarm-Intelligence platform.</p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="rounded-3xl bg-white/5 border border-white/10 p-6 backdrop-blur-md hover:border-cyan-500/30 transition-all group"
+                        >
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="p-3 bg-cyan-500/10 rounded-2xl group-hover:scale-110 transition-transform">
+                                    <ShieldCheck className="text-cyan-400" size={24} />
+                                </div>
+                                <h4 className="text-lg font-bold">Zero-Trust Expert</h4>
+                            </div>
+                            <p className="text-gray-400 text-sm">Specializing in OPA Gatekeeper, Vault, and cloud-native security pipelines.</p>
+                        </motion.div>
+                    </div>
+
+                    {/* Current Focus Card (4 cols) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="md:col-span-4 rounded-3xl bg-white/5 border border-white/10 p-8 backdrop-blur-md overflow-hidden relative group"
+                    >
+                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+                            <Rocket className="text-cyan-400" size={24} />
+                            Research Arc
+                        </h3>
+                        <div className="space-y-6">
+                            {[
+                                { title: 'Cloud-Native Security', color: 'cyan', text: 'OPA, Vault, and K8s hardening.' },
+                                { title: 'Distributed Systems', color: 'emerald', text: 'Kafka-driven event architectures.' },
+                                { title: 'CRDTs & Real-Time', color: 'blue', text: 'Yjs and conflict-free sync.' }
+                            ].map((focus, i) => (
+                                <div key={i} className="group/item">
+                                    <h4 className={`text-sm font-bold uppercase tracking-wider mb-2 text-${focus.color}-400`}>{focus.title}</h4>
+                                    <p className="text-gray-500 text-xs leading-relaxed group-hover/item:text-gray-300 transition-colors">{focus.text}</p>
+                                </div>
                             ))}
                         </div>
                     </motion.div>
 
-                    {/* HIGHLIGHTS — centered & equal width */}
+                    {/* Tech Stack Card — Wide (8 cols) */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="flex flex-col gap-6 max-w-[460px] mx-auto w-full"
+                        transition={{ delay: 0.2 }}
+                        className="md:col-span-8 rounded-3xl bg-white/5 border border-white/10 p-8 backdrop-blur-md relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-500"
                     >
-                        <Card className="w-full">
-                            <div className="flex flex-col items-center text-center gap-3 py-4">
-                                <div className="p-3 bg-purple-500/20 rounded-lg">
-                                    <Code2 className="text-purple-400" size={24} />
+                        <h3 className="text-2xl font-bold mb-10 flex items-center gap-3">
+                            <Code2 className="text-emerald-400" size={24} />
+                            Technical Ecosystem
+                        </h3>
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                            {Object.entries(SKILLS).map(([category, skills]) => (
+                                <div key={category}>
+                                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-4">{category}</h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {skills.map((skill) => (
+                                            <span
+                                                key={skill}
+                                                className="px-2.5 py-1 rounded-lg bg-emerald-500/5 border border-emerald-500/10 text-[11px] text-emerald-400 font-medium hover:bg-emerald-500/20 hover:border-emerald-400 transition-all cursor-default"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-semibold">Current Role</h3>
-                                <p className="text-gray-400">
-                                    Associate Software Engineer at Examic EdTech
-                                </p>
-                                <p className="text-sm text-gray-500">
-                                    Building scalable platforms on Azure
-                                </p>
-                            </div>
-                        </Card>
-
-                        <Card className="w-full">
-                            <div className="flex flex-col items-center text-center gap-3 py-4">
-                                <div className="p-3 bg-cyan-500/20 rounded-lg">
-                                    <Rocket className="text-cyan-400" size={24} />
-                                </div>
-                                <h3 className="text-xl font-semibold">Expertise</h3>
-                                <p className="text-gray-400">MERN Stack, React Native & DevOps</p>
-                                <p className="text-sm text-gray-500">Full-stack & mobile development</p>
-                            </div>
-                        </Card>
-
-                        <Card className="w-full">
-                            <div className="flex flex-col items-center text-center gap-3 py-4">
-                                <div className="p-3 bg-pink-500/20 rounded-lg">
-                                    <Award className="text-pink-400" size={24} />
-                                </div>
-                                <h3 className="text-xl font-semibold">Achievement</h3>
-                                <p className="text-gray-400">2nd Prize — HPE SWARM-IT Hackathon 2023</p>
-                                <p className="text-sm text-gray-500">National level competition</p>
-                            </div>
-                        </Card>
+                            ))}
+                        </div>
+                        {/* Interactive Sparkle effect could go here */}
                     </motion.div>
+
                 </div>
-
-                {/* SKILLS */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mt-16 md:mt-20"
-                >
-                    <h3 className="text-2xl md:text-3xl font-bold text-center mb-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 bg-clip-text text-transparent animate-gradient">
-                        Tech Stack
-                    </h3>
-
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1100px] mx-auto">
-                        {Object.entries(SKILLS).map(([category, skills]) => (
-                            <Card key={category} className="text-center px-4 py-6">
-                                <h4 className="text-lg font-semibold mb-3 capitalize text-purple-400">
-                                    {category}
-                                </h4>
-                                <div className="flex flex-wrap gap-2 justify-center">
-                                    {skills.map((skill) => (
-                                        <span
-                                            key={skill}
-                                            className="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10 hover:border-purple-500/50 transition-colors"
-                                        >
-                                            {skill}
-                                        </span>
-                                    ))}
-                                </div>
-                            </Card>
-                        ))}
-                    </div>
-                </motion.div>
             </div>
         </section>
     );

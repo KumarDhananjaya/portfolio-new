@@ -35,23 +35,23 @@ export const Header: React.FC = () => {
 
     return (
         <motion.header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-white/5 backdrop-blur-md border-b border-white/10 py-4'
-                    : 'bg-transparent py-6'
+            className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 max-w-[1200px] mx-auto px-6 md:px-8 ${isScrolled
+                ? 'bg-black/40 backdrop-blur-xl border border-white/10 py-3 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] shadow-cyan-500/10'
+                : 'bg-transparent py-6'
                 }`}
-            initial={{ y: -80 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
         >
             {/* CONTENT WRAPPER */}
-            <nav className="max-w-[1200px] w-full mx-auto px-6 md:px-8 lg:px-12 flex items-center justify-between">
+            <nav className="w-full flex items-center justify-between">
 
                 {/* LOGO */}
                 <motion.a
                     href="#home"
-                    className="text-2xl font-bold font-heading bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 
+                    className="text-2xl font-bold font-heading bg-gradient-to-br from-cyan-400 via-emerald-400 to-blue-500 
                      bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient"
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.1, rotate: 2 }}
                     onClick={(e) => {
                         e.preventDefault();
                         scrollToSection('#home');
@@ -61,13 +61,13 @@ export const Header: React.FC = () => {
                 </motion.a>
 
                 {/* DESKTOP NAVIGATION */}
-                <ul className="hidden md:flex items-center gap-10">
+                <ul className="hidden md:flex items-center gap-8">
                     {navItems.map((item, index) => (
                         <motion.li
                             key={item.name}
-                            initial={{ opacity: 0, y: -10 }}
+                            initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{ delay: 0.2 + index * 0.1 }}
                         >
                             <a
                                 href={item.href}
@@ -75,10 +75,10 @@ export const Header: React.FC = () => {
                                     e.preventDefault();
                                     scrollToSection(item.href);
                                 }}
-                                className="text-gray-300 hover:text-white transition-colors duration-300 relative group"
+                                className="text-gray-400 hover:text-cyan-400 transition-all duration-300 relative group text-sm font-medium tracking-wide uppercase"
                             >
                                 {item.name}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-emerald-500 group-hover:w-full transition-all duration-300 shadow-[0_0_8px_rgba(6,182,212,0.5)]"></span>
                             </a>
                         </motion.li>
                     ))}
