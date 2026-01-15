@@ -11,135 +11,85 @@ export const About: React.FC = () => {
     return (
         <section
             id="about"
-            className="w-full py-20 md:py-32 px-6 flex justify-center relative overflow-hidden bg-[#020617]"
+            className="w-full py-24 md:py-32 px-6 relative overflow-hidden bg-grain"
         >
-            {/* Background Glows */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-20 pointer-events-none">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px]"></div>
-            </div>
-
-            <div className="w-full max-w-[1300px] mx-auto relative z-10">
-                <SectionHeading subtitle="Architecting secure, high-scale digital ecosystems">
-                    Engineering Profile
-                </SectionHeading>
-
-                {/* Bento Grid Container */}
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-16">
-
-                    {/* Main Bio Card — Large (8 cols) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="md:col-span-8 group relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 backdrop-blur-md hover:border-cyan-500/30 transition-all duration-500"
-                    >
-                        <div className="relative z-10 h-full flex flex-col">
-                            <h3 className="text-3xl font-bold mb-6 text-white group-hover:text-cyan-400 transition-colors">Digital Architect</h3>
-                            <div className="space-y-4">
+            <div className="w-full max-w-7xl mx-auto relative z-10">
+                <div className="flex flex-col lg:flex-row gap-16 items-start">
+                    {/* Left Side: Bio and Personality */}
+                    <div className="flex-1 space-y-12">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-sm uppercase tracking-[0.4em] text-white/30 mb-4">The Architect</h2>
+                            <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 max-w-xl">
+                                Engineering for <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Scale & Security.</span>
+                            </h3>
+                            <div className="space-y-6 max-w-2xl">
                                 {PERSONAL_INFO.bio.split('\n\n').map((paragraph, index) => (
-                                    <p key={index} className="text-gray-400 text-lg leading-relaxed">
+                                    <p key={index} className="text-white/60 text-lg md:text-xl leading-relaxed font-light">
                                         {paragraph}
                                     </p>
                                 ))}
                             </div>
-                        </div>
-                        {/* Decorative Gradient Line */}
-                        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
-                    </motion.div>
-
-                    {/* Quick Info Grid — Small (4 cols) */}
-                    <div className="md:col-span-4 grid grid-cols-1 gap-6">
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="rounded-3xl bg-white/5 border border-white/10 p-6 backdrop-blur-md hover:border-emerald-500/30 transition-all group"
-                        >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="p-3 bg-emerald-500/10 rounded-2xl group-hover:scale-110 transition-transform">
-                                    <Award className="text-emerald-400" size={24} />
-                                </div>
-                                <h4 className="text-lg font-bold">Innovation Prize</h4>
-                            </div>
-                            <p className="text-gray-400 text-sm">HPE SWARM-IT Hackathon — National 2nd Prize for Swarm-Intelligence platform.</p>
                         </motion.div>
 
+                        {/* Achievement Pills */}
                         <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                            className="rounded-3xl bg-white/5 border border-white/10 p-6 backdrop-blur-md hover:border-cyan-500/30 transition-all group"
+                            className="flex flex-wrap gap-4"
                         >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="p-3 bg-cyan-500/10 rounded-2xl group-hover:scale-110 transition-transform">
-                                    <ShieldCheck className="text-cyan-400" size={24} />
+                            <div className="glass px-6 py-4 rounded-3xl flex items-center gap-4 group hover:bg-white/5 transition-all duration-500">
+                                <div className="p-3 rounded-2xl bg-purple-500/10 text-purple-400 group-hover:scale-110 transition-transform">
+                                    <Award size={24} />
                                 </div>
-                                <h4 className="text-lg font-bold">Zero-Trust Expert</h4>
+                                <div>
+                                    <p className="text-xs text-white/30 uppercase tracking-widest font-bold">Hackathon Winner</p>
+                                    <p className="text-white/80 font-medium">HPE SWARM-IT (2nd Prize)</p>
+                                </div>
                             </div>
-                            <p className="text-gray-400 text-sm">Specializing in OPA Gatekeeper, Vault, and cloud-native security pipelines.</p>
+                            <div className="glass px-6 py-4 rounded-3xl flex items-center gap-4 group hover:bg-white/5 transition-all duration-500">
+                                <div className="p-3 rounded-2xl bg-cyan-500/10 text-cyan-400 group-hover:scale-110 transition-transform">
+                                    <ShieldCheck size={24} />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-white/30 uppercase tracking-widest font-bold">Focus Area</p>
+                                    <p className="text-white/80 font-medium">Zero-Trust & Distributed Systems</p>
+                                </div>
+                            </div>
                         </motion.div>
                     </div>
 
-                    {/* Current Focus Card (4 cols) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="md:col-span-4 rounded-3xl bg-white/5 border border-white/10 p-8 backdrop-blur-md overflow-hidden relative group"
-                    >
-                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                            <Rocket className="text-cyan-400" size={24} />
-                            Research Arc
-                        </h3>
-                        <div className="space-y-6">
-                            {[
-                                { title: 'Cloud-Native Security', color: 'cyan', text: 'OPA, Vault, and K8s hardening.' },
-                                { title: 'Distributed Systems', color: 'emerald', text: 'Kafka-driven event architectures.' },
-                                { title: 'CRDTs & Real-Time', color: 'blue', text: 'Yjs and conflict-free sync.' }
-                            ].map((focus, i) => (
-                                <div key={i} className="group/item">
-                                    <h4 className={`text-sm font-bold uppercase tracking-wider mb-2 text-${focus.color}-400`}>{focus.title}</h4>
-                                    <p className="text-gray-500 text-xs leading-relaxed group-hover/item:text-gray-300 transition-colors">{focus.text}</p>
+                    {/* Right Side: Skill Bento Grid */}
+                    <div className="w-full lg:w-2/5 grid grid-cols-2 gap-4">
+                        {Object.entries(SKILLS).map(([category, skills], idx) => (
+                            <motion.div
+                                key={category}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.1 }}
+                                className={`p-6 rounded-[2rem] glass hover:bg-white/[0.05] transition-all duration-500 ${idx === 0 ? 'col-span-2' : ''
+                                    }`}
+                            >
+                                <h4 className="text-[10px] uppercase tracking-[0.3em] text-white/30 mb-6 font-bold">{category}</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {skills.map((skill) => (
+                                        <span
+                                            key={skill}
+                                            className="px-3 py-1 rounded-full bg-white/5 border border-white/5 text-[11px] text-white/50 font-medium hover:text-cyan-400 hover:border-cyan-400/30 transition-all cursor-default"
+                                        >
+                                            {skill}
+                                        </span>
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
-                    </motion.div>
-
-                    {/* Tech Stack Card — Wide (8 cols) */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="md:col-span-8 rounded-3xl bg-white/5 border border-white/10 p-8 backdrop-blur-md relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-500"
-                    >
-                        <h3 className="text-2xl font-bold mb-10 flex items-center gap-3">
-                            <Code2 className="text-emerald-400" size={24} />
-                            Technical Ecosystem
-                        </h3>
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                            {Object.entries(SKILLS).map(([category, skills]) => (
-                                <div key={category}>
-                                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-4">{category}</h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {skills.map((skill) => (
-                                            <span
-                                                key={skill}
-                                                className="px-2.5 py-1 rounded-lg bg-emerald-500/5 border border-emerald-500/10 text-[11px] text-emerald-400 font-medium hover:bg-emerald-500/20 hover:border-emerald-400 transition-all cursor-default"
-                                            >
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        {/* Interactive Sparkle effect could go here */}
-                    </motion.div>
-
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
