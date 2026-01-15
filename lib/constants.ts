@@ -22,11 +22,11 @@ export const SOCIAL_LINKS = {
 };
 
 export const SKILLS = {
-    languages: ["JavaScript", "TypeScript", "Java", "Python", "Golang", "C/C++", "Dart"],
-    frontend: ["React", "Next.js", "React Native", "Flutter", "Redux", "Tailwind CSS", "Framer Motion"],
-    backend: ["Node.js", "Express", "NestJS", "Spring Boot", "Kafka", "Redis (Lua scripting)", "WebSockets", "gRPC"],
-    "DevOps & Security": ["Azure", "Docker", "Kubernetes", "NGINX", "CI/CD", "GitHub Actions", "Terraform", "OPA Gatekeeper", "HashiCorp Vault", "Trivy", "Falco"],
-    databases: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
+    languages: ["JavaScript", "TypeScript", "Java", "Python", "Golang", "Rust", "C/C++", "Dart", "SQL"],
+    frontend: ["React", "Next.js", "React Native", "Flutter", "Tailwind CSS", "Framer Motion", "Three.js", "Redux"],
+    backend: ["Node.js", "Express", "NestJS", "Go-Gin", "Spring Boot", "Kafka", "Redis (Lua scripting)", "WebSockets", "gRPC"],
+    devops: ["Azure", "Docker", "Kubernetes", "NGINX", "CI/CD", "GitHub Actions", "Terraform", "Cloudflare", "OPA Gatekeeper", "HashiCorp Vault"],
+    databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Firebase"],
 };
 
 export const EXPERIENCE = [
@@ -36,16 +36,13 @@ export const EXPERIENCE = [
         location: "Mysuru, India",
         duration: "Jul 2024 – Present",
         highlights: [
-            "Architected and deployed a high-integrity Online Assessment Platform with server-validated timers, session-based concurrency control, and auto-save to ensure data consistency during network failures.",
-            "Engineered an internal CMS enabling non-technical teams to manage exam content, pricing, and packaging, reducing dependency on engineering for operations.",
-            "Built an end-to-end e-commerce and payment engine integrated with the assessment system, handling complex workflows including coupon validation, reservations, and secure payment processing.",
-            "Developed cross-platform mobile applications in React Native, including 'IRIS' smart fragrance IoT app with BLE device discovery, secure pairing, and real-time cloud sync, and a multilingual language learning app supporting French, Spanish, and Portuguese.",
-            "Designed Azure-hosted REST APIs with JWT authentication and Role-Based Access Control (RBAC) for secure device registry management and command execution.",
-            "Implemented a .NET Windows Service for secure, auditable local printing, bridging cloud commands to local hardware execution.",
-            "Optimized MongoDB schemas and APIs to reduce latency by 25% and ensured scalable, low-latency (<150ms) real-time communication via WebSockets.",
-            "Set up NGINX reverse proxies and automated CI/CD pipelines for zero-downtime deployments and secure system ingress."
+            "Architected a high-integrity Online Assessment Platform on Azure using WebSockets for <150ms real-time proctoring.",
+            "Engineered an internal CMS and end-to-end e-commerce engine, streamlining content and payment workflows.",
+            "Built high-performance React Native apps (IoT & Learning) with BLE integration and real-time cloud sync.",
+            "Implemented Zero-Downtime (ZDT) pipelines and NGINX reverse proxies for secure system ingress.",
+            "Optimized MongoDB schemas and APIs, reducing query latency by 25% for 1000+ concurrent users."
         ],
-        technologies: ["Azure", "React Native", "React", "Node.js", "Express", "MongoDB", "REST APIs", "WebSockets", "NGINX", ".NET", "BLE IoT"]
+        technologies: ["Azure", "React Native", "Node.js", "MongoDB", "WebSockets", "Docker", "BLE IoT", "NGINX"],
     },
     {
         company: "Kandra Digital Pvt. Ltd.",
@@ -53,88 +50,55 @@ export const EXPERIENCE = [
         location: "Bengaluru, India",
         duration: "Feb 2024 – Jul 2024",
         highlights: [
-            "Built full-stack MERN applications (GlobalTrans, Team Trip, Job Portal) with scalable backend, frontend, and admin panels",
-            "Optimized deployments on DigitalOcean using Docker, ensuring reliable cloud infrastructure and CI/CD pipelines",
-            "Enhanced server-side rendering and performance using Next.js for production-grade web applications",
+            "Developed full-stack MERN applications with scalable backends and admin dashboards.",
+            "Dockerized services for deployment on DigitalOcean, streamlining local and production environments.",
+            "Leveraged Next.js App Router for optimized SEO and server-side performance."
         ],
-        technologies: ["MERN Stack", "Docker", "DigitalOcean", "Next.js"],
-    },
-    {
-        company: "CAIR-DRDO",
-        position: "Software Developer Intern",
-        location: "Bengaluru, India",
-        duration: "Aug 2022 – Oct 2022",
-        highlights: [
-            "Developed and optimized a Java-based internal workflow application, achieving a 40% reduction in critical task completion times",
-            "Spearheaded the successful deployment of the application across 5 key internal departments within DRDO, resulting in an 80% increase in user adoption rate",
-            "Implemented a user-centric, responsive UI design based on iterative feedback, contributing to a 25% improvement in user satisfaction ratings",
-        ],
-        technologies: ["Java", "JSP", "HTML", "CSS", "JavaScript", "PostgreSQL", "REST APIs", "JWT"],
+        technologies: ["Next.js", "React", "Node.js", "MongoDB", "Docker", "DigitalOcean"],
     },
 ];
 
 export const PROJECTS = [
     {
-        title: "Flux-Gate",
-        description: "High-concurrency distributed flash sale engine handling 100k+ RPS with zero overselling. Utilizes Redis Lua scripts for atomicity and Kafka for asynchronous processing.",
-        technologies: ["Node.js", "Redis", "Kafka", "PostgreSQL", "Distributed Systems"],
+        title: "Flux-Gate: Flash Sale Engine",
+        description: "High-concurrency distributed flash sale engine handling 100k+ RPS with zero overselling. Utilizes Redis Lua scripts for atomicity and Kafka for event sourcing.",
+        technologies: ["Golang", "Redis", "Kafka", "PostgreSQL", "Docker", "gRPC"],
         github: "https://github.com/KumarDhananjaya/Flux-Gate-Distributed-High-Concurrency-Flash-Sale-Engine",
         featured: true,
     },
     {
-        title: "Zero-Trust API Platform",
-        description: "Cloud-native platform implementing OAuth2, RBAC/ABAC, and automated security scanning. Integrated with OPA Gatekeeper for policy enforcement and Trivy for container auditing.",
-        technologies: ["Docker", "Kubernetes", "OPA", "NestJS", "PostgreSQL", "Vault"],
-        github: "https://github.com/KumarDhananjaya/zero-trust-api-platform",
+        title: "Auth-Secure: Identity Platform",
+        description: "Production-grade authentication system with multi-provider OAuth, token rotation, and suspicious login detection. Built with security-first principles and GDPR compliance.",
+        technologies: ["TypeScript", "Next.js", "Prisma", "PostgreSQL", "Jose", "React Hook Form"],
+        github: "https://github.com/KumarDhananjaya/auth-secure-pro",
         featured: true,
     },
     {
         title: "The Ironclad Pipeline",
-        description: "Zero-Trust software supply chain implementing shift-left security. Features secret scanning, SAST, container scanning, and image signing with Sigstore.",
-        technologies: ["Gitleaks", "SonarQube", "Trivy", "Sigstore", "Jenkins", "Falco"],
+        description: "Zero-Trust software supply chain implementing shift-left security with secret scanning, SAST, and container auditing using Trivy and OPA.",
+        technologies: ["Gitleaks", "SonarQube", "Trivy", "Sigstore", "Jenkins", "Falco", "OPA"],
         github: "https://github.com/KumarDhananjaya/The-Ironclad-Pipeline-A-Zero-Trust-Software-Supply-Chain",
         featured: true,
     },
     {
         title: "Real-Time Collaborative Editor",
-        description: "Multi-user text editor using CRDTs (Yjs) for conflict-free synchronization. Features real-time cursors, presence indicators, and document versioning.",
-        technologies: ["React", "WebSockets", "Node.js", "CRDTs", "Redis"],
+        description: "Multi-user text editor using CRDTs (Yjs) for conflict-free synchronization, featuring real-time cursors and document versioning.",
+        technologies: ["React", "WebSockets", "Node.js", "CRDTs", "Redis", "Yjs"],
         github: "https://github.com/KumarDhananjaya/Real-Time-Collaborative-Text-Editor",
         featured: true,
     },
     {
-        title: "Clusteroids - College Management App",
-        description: "Comprehensive mobile app for streamlining academic administrative tasks. Achieved high engagement within the college community with sub-second performance.",
-        technologies: ["Flutter", "Dart", "Firebase"],
-        github: "https://github.com/KumarDhananjaya/Clusteroids",
+        title: "Splendly UI & Analytics",
+        description: "A premium UI kit and financial analytics dashboard with complex SVG charts, haptic-like feedback, and custom design tokens.",
+        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Recharts", "Lucide"],
+        github: "https://github.com/KumarDhananjaya/splendly-ui",
         featured: true,
     },
     {
-        title: "ConnectX - Social Platform",
-        description: "Full-stack social media implementing notifications, private messaging, and content feeds. Optimized for mobile responsiveness and performance.",
-        technologies: ["MERN Stack", "WebSockets", "Redux", "JWT"],
+        title: "ConnectX - Social Ecosystem",
+        description: "Full-stack social media platform with real-time notifications and private messaging, optimized for high performance and mobile response.",
+        technologies: ["React", "Node.js", "MongoDB", "WebSockets", "Redux", "Express"],
         github: "https://github.com/KumarDhananjaya/ConnectX",
-        featured: false,
-    },
-    {
-        title: "Hospify - Hotel Management",
-        description: "Enterprise-grade hotel operations system with role-based access control and real-time inventory management.",
-        technologies: ["Spring Boot", "React", "PostgreSQL", "Docker"],
-        github: "https://github.com/KumarDhananjaya/Hospify-Hotel-Operations-Management",
-        featured: false,
-    },
-    {
-        title: "Sorting Visualizer",
-        description: "Interactive visualizer for various sorting algorithms (Bubble, Merge, Quick, etc.). Helps in understanding algorithmic complexity and pathfinding visually.",
-        technologies: ["React", "TypeScript", "Algorithms", "CSS Animations"],
-        github: "https://github.com/KumarDhananjaya/Sorting-Visualizer",
-        featured: false,
-    },
-    {
-        title: "MITT App - Official College App",
-        description: "Launched the official college Android application, used by 300+ active users. Integrated real-time push notifications and student resource hub.",
-        technologies: ["Java", "Android SDK", "Firebase", "Firestore", "JWT", "Push Notifications", "Material Design"],
-        github: "#",
         featured: false,
     },
 ];
