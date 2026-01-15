@@ -11,61 +11,61 @@ export const Experience: React.FC = () => {
     return (
         <section
             id="experience"
-            className="w-full py-24 md:py-32 px-6 relative overflow-hidden bg-[#020617]"
+            className="w-full py-24 md:py-32 px-6 relative overflow-hidden bg-grain"
         >
-            {/* Background Atmosphere */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent pointer-events-none" />
+            <div className="w-full max-w-6xl mx-auto relative z-10">
+                <div className="mb-20">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <h2 className="text-sm uppercase tracking-[0.4em] text-white/30 mb-4">The Journey</h2>
+                        <h3 className="text-4xl md:text-6xl font-bold tracking-tighter">
+                            Building the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Future.</span>
+                        </h3>
+                    </motion.div>
+                </div>
 
-            <div className="w-full max-w-[1200px] mx-auto relative z-10">
-                <SectionHeading subtitle="Solving complex production challenges across high-scale platforms">
-                    Professional Timeline
-                </SectionHeading>
-
-                <div className="relative mt-16 max-w-4xl mx-auto pl-8 md:pl-0">
-                    {/* Vertical Timeline Line */}
-                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-cyan-500/0 via-cyan-500/20 to-emerald-500/0 -translate-x-1/2 hidden md:block" />
+                <div className="relative space-y-12">
+                    {/* Elegant Connector Line */}
+                    <div className="absolute left-[15px] md:left-[21px] top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/50 via-cyan-500/50 to-transparent" />
 
                     {EXPERIENCE.map((exp, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                            initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                            className={`relative flex flex-col md:flex-row items-center gap-8 mb-20 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                                }`}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="relative pl-12 md:pl-20 group"
                         >
-                            {/* Connector Node */}
-                            <div className="absolute left-[-32px] md:left-1/2 top-10 md:top-1/2 w-4 h-4 rounded-full bg-[#020617] border-2 border-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.5)] -translate-x-1/2 -translate-y-1/2 z-20" />
+                            {/* Animated Node */}
+                            <div className="absolute left-0 md:left-2 top-0">
+                                <div className="w-8 h-8 rounded-2xl glass flex items-center justify-center group-hover:bg-white/10 transition-colors duration-500">
+                                    <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+                                </div>
+                            </div>
 
-                            {/* Card Content */}
-                            <div className="w-full md:w-[45%]">
-                                <div className="p-8 md:p-10 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-cyan-500/30 transition-all duration-500 group relative">
-                                    <div className="absolute -top-10 left-0 text-emerald-400 font-bold tracking-widest text-sm flex items-center gap-2">
-                                        <Calendar size={16} />
+                            <div className="flex flex-col md:flex-row md:items-start gap-8">
+                                <div className="flex-1">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase tracking-widest text-white/40 mb-4 font-semibold">
+                                        <Calendar size={12} />
                                         {exp.duration}
                                     </div>
+                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-purple-400 transition-colors duration-500">
+                                        {exp.position}
+                                    </h3>
+                                    <p className="text-lg text-white/60 font-medium mb-6">
+                                        {exp.company} <span className="text-white/20 px-2">/</span> {exp.location}
+                                    </p>
 
-                                    <div className="flex flex-col gap-2 mb-6">
-                                        <div className="flex items-center gap-3">
-                                            <div className="p-2 bg-cyan-500/10 rounded-xl">
-                                                <Briefcase className="text-cyan-400" size={20} />
-                                            </div>
-                                            <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                                                {exp.position}
-                                            </h3>
-                                        </div>
-                                        <div className="flex items-center gap-2 text-emerald-400/80 font-semibold pl-12">
-                                            <MapPin size={14} />
-                                            {exp.company} — {exp.location}
-                                        </div>
-                                    </div>
-
-                                    <ul className="space-y-4 text-gray-400 text-sm leading-relaxed mb-8 pl-2">
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                                         {exp.highlights.map((highlight, i) => (
-                                            <li key={i} className="flex items-start gap-4">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-cyan-500/50 mt-1.5 shrink-0" />
-                                                <span>{highlight}</span>
+                                            <li key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.04] transition-colors duration-300">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-purple-500/50 mt-2 shrink-0" />
+                                                <span className="text-sm text-white/50 leading-relaxed font-light">{highlight}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -74,7 +74,7 @@ export const Experience: React.FC = () => {
                                         {exp.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-cyan-300 font-medium hover:bg-cyan-500/10 hover:border-cyan-500/20 transition-all cursor-default"
+                                                className="px-4 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/5 text-cyan-400 border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300"
                                             >
                                                 {tech}
                                             </span>
@@ -82,9 +82,6 @@ export const Experience: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Empty Space for layout */}
-                            <div className="hidden md:block w-[45%]" />
                         </motion.div>
                     ))}
                 </div>
