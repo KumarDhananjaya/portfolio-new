@@ -15,104 +15,71 @@ export const Hero: React.FC = () => {
     return (
         <section
             id="home"
-            className="
-        min-h-screen 
-        flex items-center justify-center 
-        relative overflow-hidden 
-        px-6 md:px-8 lg:px-12
-        bg-[#020617]
-      "
+            className="min-h-[90vh] flex items-center justify-center relative overflow-hidden px-6 bg-grain"
         >
-            {/* Mesh Gradient Background */}
-            <div className="absolute inset-0 z-0 opactiy-30">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+            {/* Advanced Mesh Gradient Background */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+                <div className="absolute top-[40%] left-[30%] w-[30%] h-[30%] bg-pink-500/10 rounded-full blur-[100px]" />
             </div>
 
-            {/* High-Tech Grid Pattern */}
-            <div className="absolute inset-0 pointer-events-none z-0
-        bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),
-            linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)]
-        bg-[size:40px_40px]
-        [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]
-      "></div>
+            {/* Grid Pattern with Fade */}
+            <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]
+                bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
+                bg-[size:40px_40px]"
+            />
 
-            {/* Content Container */}
-            <div className="relative w-full max-w-5xl mx-auto text-center z-10">
-
-                {/* Greeting Badge */}
-                {/* <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
-                >
-                    <Sparkles className="text-cyan-400" size={16} />
-                    <span className="text-cyan-400/90 text-sm font-medium tracking-wider uppercase">Available for new opportunities</span>
-                </motion.div> */}
-
-                {/* Name & Title with Parallax Effect */}
+            <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center">
+                {/* Status Badge */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    transition={{ duration: 0.8 }}
+                    className="flex items-center gap-2 px-4 py-2 rounded-full glass border-white/5 mb-8"
                 >
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tight leading-none">
-                        <span className="block text-white/90">I'm</span>
-                        <span className="bg-gradient-to-br from-cyan-400 via-emerald-400 to-blue-500 
-                bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient">
-                            {PERSONAL_INFO.name}
-                        </span>
-                    </h1>
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs font-medium tracking-widest uppercase text-white/50">Available for new opportunities</span>
                 </motion.div>
 
-                {/* Role Description */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="mb-8"
-                >
-                    <p className="text-2xl md:text-4xl text-gray-300 font-light tracking-tight">
-                        {PERSONAL_INFO.title}
-                    </p>
-                    <p className="text-xl md:text-2xl font-medium text-emerald-400/80 mt-2">
-                        {PERSONAL_INFO.subtitle}
-                    </p>
-                </motion.div>
+                {/* Main Heading with Staggered Characters */}
+                <div className="overflow-hidden mb-6">
+                    <motion.h1
+                        initial={{ y: "100%" }}
+                        animate={{ y: 0 }}
+                        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                        className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center leading-[0.9]"
+                    >
+                        {PERSONAL_INFO.name.split(' ').map((word, i) => (
+                            <span key={i} className="inline-block mr-4 last:mr-0 outline-text hover:text-white transition-all duration-700">
+                                {word}
+                            </span>
+                        ))}
+                    </motion.h1>
+                </div>
 
-                {/* Tagline */}
-                <motion.p
+                {/* Subtitle / Role */}
+                <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.6 }}
-                    className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="flex flex-col items-center gap-4 mb-12"
                 >
-                    {PERSONAL_INFO.tagline}
-                </motion.p>
+                    <p className="text-2xl md:text-3xl font-light text-white/70 tracking-tight text-center max-w-2xl">
+                        {PERSONAL_INFO.subtitle}
+                    </p>
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                </motion.div>
 
-                {/* CTA Buttons */}
+                {/* CTA Group */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
+                    className="flex flex-col sm:flex-row items-center gap-6"
                 >
-                    <Button
-                        variant="primary"
-                        onClick={() => scrollToSection('#projects')}
-                        className="group relative px-10 py-4 overflow-hidden"
-                    >
-                        <span className="relative z-10 flex items-center gap-2">
-                            Explore My Projects
-                            <motion.div
-                                animate={{ x: [0, 5, 0] }}
-                                transition={{ repeat: Infinity, duration: 1.5 }}
-                            >
-                                <ArrowDown size={20} className="-rotate-90" />
-                            </motion.div>
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-cyan-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <Button variant="primary" onClick={() => scrollToSection('#projects')} icon={<Sparkles size={18} />}>
+                        Explore My Work
                     </Button>
                     <Button variant="outline" onClick={() => scrollToSection('#contact')}>
                         Start a Conversation
