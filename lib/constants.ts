@@ -23,7 +23,7 @@ export const SOCIAL_LINKS = {
 
 export const SKILLS = {
     languages: ["JavaScript", "TypeScript", "Java", "Python", "Golang", "Rust", "C/C++", "Dart", "SQL"],
-    frontend: ["React", "Next.js", "React Native", "Flutter", "Tailwind CSS", "Framer Motion", "Three.js", "Redux"],
+    frontend: ["React", "Next.js", "React Native", "Tailwind CSS", "Framer Motion", "Three.js", "Redux"],
     backend: ["Node.js", "Express", "NestJS", "Go-Gin", "Spring Boot", "Kafka", "Redis (Lua scripting)", "WebSockets", "gRPC"],
     devops: ["Azure", "Docker", "Kubernetes", "NGINX", "CI/CD", "GitHub Actions", "Terraform", "Cloudflare", "OPA Gatekeeper", "HashiCorp Vault"],
     databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Firebase"],
@@ -36,13 +36,13 @@ export const EXPERIENCE = [
         location: "Mysuru, India",
         duration: "Jul 2024 – Present",
         highlights: [
-            "Architected a high-integrity Online Assessment Platform on Azure using WebSockets for <150ms real-time proctoring.",
-            "Engineered an internal CMS and end-to-end e-commerce engine, streamlining content and payment workflows.",
-            "Built high-performance React Native apps (IoT & Learning) with BLE integration and real-time cloud sync.",
-            "Implemented Zero-Downtime (ZDT) pipelines and NGINX reverse proxies for secure system ingress.",
-            "Optimized MongoDB schemas and APIs, reducing query latency by 25% for 1000+ concurrent users."
+            "Architected a low-latency Online Assessment Platform on Azure, leveraging WebSockets to achieve <150ms real-time proctoring and state synchronization.",
+            "Engineered an enterprise-grade internal CMS and e-commerce engine, automating exam packaging and payment workflows to reduce operational overhead.",
+            "Pioneered a hardware-to-cloud bridge in React Native for 'IRIS' IoT, implementing secure BLE pairing and real-time device monitoring.",
+            "Hardened infrastructure security and availability by implementing NGINX reverse proxies and Zero-Downtime (ZDT) deployment strategies.",
+            "Refactored MongoDB schemas and API logic to support 1000+ concurrent users, resulting in a 25% reduction in end-to-end query latency."
         ],
-        technologies: ["Azure", "React Native", "Node.js", "MongoDB", "WebSockets", "Docker", "BLE IoT", "NGINX"],
+        technologies: ["React", "Next.js", "Node.js", "React Native", "MongoDB", "WebSockets", "Docker", "BLE IoT", "NGINX", "Azure"],
     },
     {
         company: "Kandra Digital Pvt. Ltd.",
@@ -60,45 +60,45 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
-        title: "Flux-Gate: Flash Sale Engine",
-        description: "High-concurrency distributed flash sale engine handling 100k+ RPS with zero overselling. Utilizes Redis Lua scripts for atomicity and Kafka for event sourcing.",
-        technologies: ["Golang", "Redis", "Kafka", "PostgreSQL", "Docker", "gRPC"],
+        title: "pulsetrace",
+        description: "High-performance telemetry & error tracking platform designed for million-scale events. Featuring real-time anomaly detection and distributed tracing.",
+        technologies: ["TypeScript", "Node.js", "ClickHouse", "Redis", "Kafka", "React"],
+        github: "https://github.com/KumarDhananjaya/pulsetrace",
+        featured: true,
+    },
+    {
+        title: "Flux-Gate",
+        description: "Distributed high-concurrency flash sale engine handling 100k+ RPS with zero overselling. Implements atomic inventory management and a virtual waiting room.",
+        technologies: ["TypeScript", "Node.js", "Redis (Lua)", "Kafka", "PostgreSQL", "Docker"],
         github: "https://github.com/KumarDhananjaya/Flux-Gate-Distributed-High-Concurrency-Flash-Sale-Engine",
         featured: true,
     },
     {
-        title: "Auth-Secure: Identity Platform",
-        description: "Production-grade authentication system with multi-provider OAuth, token rotation, and suspicious login detection. Built with security-first principles and GDPR compliance.",
-        technologies: ["TypeScript", "Next.js", "Prisma", "PostgreSQL", "Jose", "React Hook Form"],
-        github: "https://github.com/KumarDhananjaya/auth-secure-pro",
-        featured: true,
-    },
-    {
         title: "The Ironclad Pipeline",
-        description: "Zero-Trust software supply chain implementing shift-left security with secret scanning, SAST, and container auditing using Trivy and OPA.",
-        technologies: ["Gitleaks", "SonarQube", "Trivy", "Sigstore", "Jenkins", "Falco", "OPA"],
+        description: "Zero-Trust software supply chain implementing shift-left security with secret scanning, SAST, and runtime protection using Trivy and OPA.",
+        technologies: ["Terraform", "OPA", "Vault", "Trivy", "SonarQube", "Falco", "GitHub Actions"],
         github: "https://github.com/KumarDhananjaya/The-Ironclad-Pipeline-A-Zero-Trust-Software-Supply-Chain",
         featured: true,
     },
     {
+        title: "Spendly",
+        description: "Modern personal finance application with an offline-first experience, secure cloud sync, and advanced spending analytics built on a secure backend.",
+        technologies: ["TypeScript", "React Native", "Supabase", "PostgreSQL", "Framer Motion"],
+        github: "https://github.com/KumarDhananjaya/Spendly",
+        featured: true,
+    },
+    {
         title: "Real-Time Collaborative Editor",
-        description: "Multi-user text editor using CRDTs (Yjs) for conflict-free synchronization, featuring real-time cursors and document versioning.",
-        technologies: ["React", "WebSockets", "Node.js", "CRDTs", "Redis", "Yjs"],
+        description: "High-integrity multi-user text editor using CRDTs (Yjs) for conflict-free synchronization, featuring real-time cursors and document versioning.",
+        technologies: ["TypeScript", "Yjs", "WebSockets", "Node.js", "Redis", "MongoDB"],
         github: "https://github.com/KumarDhananjaya/Real-Time-Collaborative-Text-Editor",
         featured: true,
     },
     {
-        title: "Splendly UI & Analytics",
-        description: "A premium UI kit and financial analytics dashboard with complex SVG charts, haptic-like feedback, and custom design tokens.",
-        technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Recharts", "Lucide"],
-        github: "https://github.com/KumarDhananjaya/splendly-ui",
-        featured: true,
-    },
-    {
-        title: "ConnectX - Social Ecosystem",
-        description: "Full-stack social media platform with real-time notifications and private messaging, optimized for high performance and mobile response.",
-        technologies: ["React", "Node.js", "MongoDB", "WebSockets", "Redux", "Express"],
-        github: "https://github.com/KumarDhananjaya/ConnectX",
+        title: "zero-trust-api-platform",
+        description: "Cloud-native API platform focused on secure communication using Zero-Trust principles, enforced through granular access control and policy-as-code.",
+        technologies: ["NestJS", "OPA", "Kong", "Docker", "TypeScript"],
+        github: "https://github.com/KumarDhananjaya/zero-trust-api-platform",
         featured: false,
     },
 ];
