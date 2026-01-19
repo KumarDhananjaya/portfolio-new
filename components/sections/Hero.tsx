@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
     return (
         <section
             id="home"
-            className="min-h-[90vh] flex items-center justify-center relative overflow-hidden px-6 bg-grain"
+            className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6 bg-grain pt-32"
         >
             {/* Advanced Mesh Gradient Background */}
             <div className="absolute inset-0 z-0">

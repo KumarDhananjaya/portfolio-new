@@ -35,13 +35,13 @@ export const Header: React.FC = () => {
 
     return (
         <motion.header
-            className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-700 w-[calc(100%-3rem)] max-w-5xl ${isScrolled ? 'top-4' : 'top-8'
+            className={`fixed left-1/2 z-50 transition-all duration-700 w-[calc(100%-3rem)] max-w-5xl ${isScrolled ? 'top-4' : 'top-8'
                 }`}
             initial={{ y: -100, x: '-50%', opacity: 0 }}
             animate={{ y: 0, x: '-50%', opacity: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-            <nav className={`relative flex items-center justify-between px-6 py-4 rounded-[2rem] transition-all duration-700 ${isScrolled ? 'glass-dark shadow-2xl' : 'bg-transparent'
+            <nav className={`relative flex items-center justify-between px-6 py-4 rounded-[2rem] transition-all duration-700 ${isScrolled ? 'glass-dark shadow-2xl' : 'glass-dark/20'
                 }`}>
                 {/* Logo */}
                 <motion.a
@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
                     }}
                     className="text-xl font-bold tracking-tighter text-white hover:text-purple-400 transition-colors duration-300"
                 >
-                    Kumar<span className="text-white/20">.</span>D
+                    Portfolio<span className="text-white/20">.</span>
                 </motion.a>
 
                 {/* Desktop Nav */}
