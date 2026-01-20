@@ -6,6 +6,7 @@ export const PERSONAL_INFO = {
     email: "kumar62.shivu@gmail.com",
     phone: "+91-9743086802",
     resume: "/resume.pdf",
+    resume_view: "https://drive.google.com/file/d/1SO9U5QxzxGp9t7lj2xmzWs13ZyZ3mb3D/view",
     tagline: "Building scalable distributed systems with a focus on Zero-Trust security.",
     bio: `Hey there! I'm Kumar Dhananjaya, an Associate Software Engineer passionate about building scalable, high-concurrency applications and secure cloud-native experiences. With expertise in the MERN stack, React Native, and DevSecOps, I focus on turning complex technical challenges into robust, production-ready solutions.
 
