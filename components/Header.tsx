@@ -2,7 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileDown } from 'lucide-react';
+import { PERSONAL_INFO } from '@/lib/constants';
+import { Button } from '@/components/ui/Button';
 
 const navItems = [
     { name: 'Home', href: '#home' },
@@ -55,19 +57,29 @@ export const Header: React.FC = () => {
                     Portfolio<span className="text-white/20">.</span>
                 </motion.a>
 
-                {/* Desktop Nav */}
-                <ul className="hidden md:flex items-center gap-1">
-                    {navItems.map((item) => (
-                        <li key={item.name}>
-                            <button
-                                onClick={() => scrollToSection(item.href)}
-                                className="px-5 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all duration-300 rounded-full hover:bg-white/5"
-                            >
-                                {item.name}
-                            </button>
-                        </li>
-                    ))}
-                </ul>
+                <div className="hidden md:flex items-center gap-4">
+                    <ul className="flex items-center gap-1">
+                        {navItems.map((item) => (
+                            <li key={item.name}>
+                                <button
+                                    onClick={() => scrollToSection(item.href)}
+                                    className="px-5 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all duration-300 rounded-full hover:bg-white/5"
+                                >
+                                    {item.name}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                    <Button
+                        variant="primary"
+                        href={PERSONAL_INFO.resume}
+                        download="Kumar_Dhananjaya_Resume.pdf"
+                        className="py-2.5 px-6 rounded-full text-[10px] uppercase tracking-widest font-bold"
+                        icon={<FileDown size={14} />}
+                    >
+                        Resume
+                    </Button>
+                </div>
 
                 {/* Mobile Trigger */}
                 <button
@@ -95,6 +107,17 @@ export const Header: React.FC = () => {
                                     {item.name}
                                 </button>
                             ))}
+                            <div className="pt-2">
+                                <Button
+                                    variant="primary"
+                                    href={PERSONAL_INFO.resume}
+                                    download="Kumar_Dhananjaya_Resume.pdf"
+                                    className="w-full py-4 rounded-2xl"
+                                    icon={<FileDown size={18} />}
+                                >
+                                    Download Resume
+                                </Button>
+                            </div>
                         </motion.div>
                     )}
                 </AnimatePresence>

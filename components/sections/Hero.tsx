@@ -81,6 +81,9 @@ export const Hero: React.FC = () => {
                     <Button variant="primary" onClick={() => scrollToSection('#projects')} icon={<Sparkles size={18} />}>
                         Explore My Work
                     </Button>
+                    <Button variant="outline" href={PERSONAL_INFO.resume} download="Kumar_Dhananjaya_Resume.pdf" icon={<ArrowDown size={18} />}>
+                        Download CV
+                    </Button>
                     <Button variant="outline" onClick={() => scrollToSection('#contact')}>
                         Start a Conversation
                     </Button>

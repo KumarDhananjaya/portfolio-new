@@ -5,6 +5,7 @@ interface ButtonProps {
     children: React.ReactNode;
     variant?: 'primary' | 'secondary' | 'outline';
     href?: string;
+    download?: boolean | string;
     onClick?: () => void;
     className?: string;
     icon?: React.ReactNode;
@@ -14,6 +15,7 @@ export const Button: React.FC<ButtonProps> = ({
     children,
     variant = 'primary',
     href,
+    download,
     onClick,
     className = '',
     icon,
@@ -51,6 +53,7 @@ export const Button: React.FC<ButtonProps> = ({
         return (
             <MotionA
                 href={href}
+                download={download}
                 className={`${baseStyles} ${variants[variant]} ${className}`}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
