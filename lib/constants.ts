@@ -62,6 +62,14 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "FraudLens",
+        description: "End-to-end Machine Learning pipeline and web dashboard for real-time credit card fraud detection using an XGBoost classifier and FastAPI.",
+        technologies: ["React", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "XGBoost"],
+        github: "https://github.com/KumarDhananjaya/Fraud-Detection-ML-System",
+        link: "https://fraud-detection-ml-system-seven.vercel.app/",
+        featured: true,
+    },
+    {
         title: "pulsetrace",
         description: "High-performance telemetry & error tracking platform designed for million-scale events. Featuring real-time anomaly detection and distributed tracing.",
         technologies: ["TypeScript", "Node.js", "ClickHouse", "Redis", "Kafka", "React"],
