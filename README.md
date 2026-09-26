@@ -12,7 +12,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.0-a855f7?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Web Audio API](https://img.shields.io/badge/Web_Audio_API-Synthesizer-10b981?style=for-the-badge&logo=audio)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 
-[**Explore Live Instance ↗**](https://portfolio-new.vercel.app/) • [**Read Technical Blog ↗**](https://medium.com/@kumar62.shivu) • [**View Resume ↗**](https://drive.google.com/file/d/13Ig5DJfxEouOIgQIRhJzXWEKFADVVJWB/view?usp=sharing)
+[**Explore Live Instance ↗**](https://portfolio-new.vercel.app/) • [**Read Technical Blog ↗**](https://medium.com/@kumar62.shivu) • [**View Resume ↗**](https://drive.google.com/file/d/1rnKQ_pGaJ9hX_rkVGyLCUQhICJkSPC-m/view?usp=sharing)
 
 </div>
 

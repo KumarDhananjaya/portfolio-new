@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
     email: "kumar62.shivu@gmail.com",
     phone: "+91-9743086802",
     resume: "/resume.pdf",
-    resume_view: "https://drive.google.com/file/d/13Ig5DJfxEouOIgQIRhJzXWEKFADVVJWB/view?usp=sharing",
+    resume_view: "https://drive.google.com/file/d/1rnKQ_pGaJ9hX_rkVGyLCUQhICJkSPC-m/view?usp=sharing",
     tagline: "Building scalable distributed systems with a focus on Zero-Trust security.",
     bio: `Hey there! I'm Kumar Dhananjaya, a software engineer currently based in Sydney, Australia, pursuing my Master of Computer Science (Advanced Entry) at The University of Sydney. I specialize in building scalable, high-concurrency distributed applications, autonomous AI agent platforms, and secure cloud-native architectures.
 
