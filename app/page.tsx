@@ -12,11 +12,13 @@ import { TechMarquee } from '@/components/ui/TechMarquee';
 import { Preloader } from '@/components/ui/Preloader';
 import { CustomCursor } from '@/components/ui/CustomCursor';
 import { FallingStars } from '@/components/ui/FallingStars';
+import { Moon } from '@/components/ui/Moon';
 
 export default function Home() {
   return (
     <main className="min-h-screen space-y-0 relative">
       <FallingStars />
+      <Moon />
       <Preloader />
       <CustomCursor />
       <Header />

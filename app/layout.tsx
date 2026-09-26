@@ -16,8 +16,18 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Kumar Dhananjaya | Full-Stack & Mobile Developer",
-  description: "Associate Software Engineer specializing in Full-Stack and Mobile App Development. Expert in MERN Stack, React Native, and DevOps.",
-  keywords: ["Kumar Dhananjaya", "Full-Stack Developer", "Mobile Developer", "React", "Next.js", "React Native", "MERN Stack", "DevOps"],
+  description:
+    "Associate Software Engineer specializing in Full-Stack and Mobile App Development. Expert in MERN Stack, React Native, and DevOps.",
+  keywords: [
+    "Kumar Dhananjaya",
+    "Full-Stack Developer",
+    "Mobile Developer",
+    "React",
+    "Next.js",
+    "React Native",
+    "MERN Stack",
+    "DevOps",
+  ],
   authors: [{ name: "Kumar Dhananjaya" }],
   creator: "Kumar Dhananjaya",
   openGraph: {
@@ -25,13 +35,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://kumardhananjaya.com",
     title: "Kumar Dhananjaya | Full-Stack & Mobile Developer",
-    description: "Associate Software Engineer specializing in Full-Stack and Mobile App Development",
+    description:
+      "Associate Software Engineer specializing in Full-Stack and Mobile App Development",
     siteName: "Kumar Dhananjaya Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Kumar Dhananjaya | Full-Stack & Mobile Developer",
-    description: "Associate Software Engineer specializing in Full-Stack and Mobile App Development",
+    description:
+      "Associate Software Engineer specializing in Full-Stack and Mobile App Development",
     creator: "@SKumarDhananjay",
   },
   robots: {
@@ -48,8 +60,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth scroll-pt-[100px]" suppressHydrationWarning>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+    <html
+      lang="en"
+      className="scroll-smooth scroll-pt-[100px]"
+      suppressHydrationWarning
+    >
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
