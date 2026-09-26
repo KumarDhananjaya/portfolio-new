@@ -15,10 +15,10 @@ const dynamicTitles = [
 ];
 
 const floatingStats = [
-    { label: '100k+ RPS', subtitle: 'Concurrency Engine', icon: Zap, color: 'text-amber-400 border-amber-500/30 bg-amber-500/10' },
+    { label: '100k+ RPS', subtitle: 'Concurrency Engine', icon: Zap, color: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/10' },
     { label: 'USYD', subtitle: 'Master of CS (Adv)', icon: GraduationCap, color: 'text-purple-400 border-purple-500/30 bg-purple-500/10' },
     { label: '5+ PRs Merged', subtitle: 'Global Open Source', icon: GitPullRequest, color: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/10' },
-    { label: 'Multi-Agent MCP', subtitle: 'LangChain & Tools', icon: Cpu, color: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/10' },
+    { label: 'Multi-Agent MCP', subtitle: 'LangChain & Tools', icon: Cpu, color: 'text-indigo-400 border-indigo-500/30 bg-indigo-500/10' },
 ];
 
 export const Hero: React.FC = () => {
@@ -102,7 +102,7 @@ export const Hero: React.FC = () => {
                         className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight leading-[0.92]"
                     >
                         <span className="text-foreground">Kumar </span>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">
                             Dhananjaya
                         </span>
                     </motion.h1>

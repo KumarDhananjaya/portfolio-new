@@ -57,7 +57,7 @@ export const Header: React.FC = () => {
             {/* Top scroll progress bar */}
             <div className="fixed top-0 left-0 right-0 h-[2px] z-[9998] pointer-events-none bg-transparent">
                 <div
-                    className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 transition-all duration-75"
+                    className="h-full bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-400 transition-all duration-75"
                     style={{ width: `${scrollProgress}%` }}
                 />
             </div>

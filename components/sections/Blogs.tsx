@@ -34,7 +34,7 @@ export const Blogs: React.FC = () => {
                             <span>Engineering Publications</span>
                         </div>
                         <h3 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-5 text-foreground">
-                            System Essays & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">Architectural Notes.</span>
+                            System Essays & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">Architectural Notes.</span>
                         </h3>
                         <p className="text-muted text-base md:text-lg leading-relaxed font-normal">
                             Deep-dive engineering articles exploring Retrieval-Augmented Generation exact-match fallacies, 100k+ RPS zero-overselling architectures, event-driven microservices, and database query optimizations.

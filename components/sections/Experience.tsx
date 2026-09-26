@@ -15,10 +15,10 @@ export const Experience: React.FC = () => {
             <div className="w-full max-w-6xl mx-auto relative z-10">
                 {/* Chapter Story Tag */}
                 <div className="flex items-center gap-3 mb-6">
-                    <span className="px-3.5 py-1 rounded-full text-[11px] font-mono font-bold tracking-widest uppercase bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                    <span className="px-3.5 py-1 rounded-full text-[11px] font-mono font-bold tracking-widest uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
                         Chapter 05: Industry Track Record & Production Systems
                     </span>
-                    <div className="h-[1px] flex-1 bg-gradient-to-r from-amber-500/30 to-transparent" />
+                    <div className="h-[1px] flex-1 bg-gradient-to-r from-cyan-500/30 to-transparent" />
                 </div>
 
                 <div className="mb-20">
@@ -29,18 +29,18 @@ export const Experience: React.FC = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-xs uppercase font-mono tracking-[0.3em] text-muted mb-4 font-bold flex items-center gap-2">
-                            <Briefcase size={14} className="text-amber-400" />
+                            <Briefcase size={14} className="text-cyan-400" />
                             <span>Professional Chronology</span>
                         </h2>
                         <h3 className="text-4xl md:text-6xl font-black tracking-tight text-foreground">
-                            Engineering at <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-pink-400 to-purple-400">Production Scale.</span>
+                            Engineering at <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">Production Scale.</span>
                         </h3>
                     </motion.div>
                 </div>
 
                 <div className="relative space-y-12">
                     {/* Glowing Connector Line */}
-                    <div className="absolute left-[15px] md:left-[21px] top-0 bottom-0 w-px bg-gradient-to-b from-amber-500/60 via-purple-500/60 to-cyan-500/60" />
+                    <div className="absolute left-[15px] md:left-[21px] top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/60 via-purple-500/60 to-emerald-500/60" />
 
                     {EXPERIENCE.map((exp, index) => (
                         <motion.div
@@ -55,18 +55,18 @@ export const Experience: React.FC = () => {
                         >
                             {/* Animated Node */}
                             <div className="absolute left-0 md:left-2 top-0">
-                                <div className="w-8 h-8 rounded-2xl glass flex items-center justify-center group-hover:border-amber-400/60 transition-colors duration-300">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
+                                <div className="w-8 h-8 rounded-2xl glass flex items-center justify-center group-hover:border-cyan-400/60 transition-colors duration-300">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(6,182,212,0.8)]" />
                                 </div>
                             </div>
 
                             <div className="flex flex-col md:flex-row md:items-start gap-8">
                                 <div className="flex-1 p-6 md:p-8 rounded-3xl glass border border-border group-hover:border-border/80 transition-all bg-card/60">
                                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-foreground/5 border border-border text-[11px] font-mono uppercase tracking-widest text-muted mb-4 font-semibold">
-                                        <Calendar size={12} className="text-amber-400" />
+                                        <Calendar size={12} className="text-cyan-400" />
                                         {exp.duration}
                                     </div>
-                                    <h3 className="text-2xl md:text-3xl font-black text-foreground mb-1 group-hover:text-amber-400 transition-colors">
+                                    <h3 className="text-2xl md:text-3xl font-black text-foreground mb-1 group-hover:text-cyan-400 transition-colors">
                                         {exp.position}
                                     </h3>
                                     <p className="text-sm md:text-base text-muted font-mono mb-6">
@@ -78,7 +78,7 @@ export const Experience: React.FC = () => {
                                     <ul className="grid grid-cols-1 gap-3 mb-8">
                                         {exp.highlights.map((highlight, i) => (
                                             <li key={i} className="flex items-start gap-3 p-3.5 rounded-2xl bg-foreground/[0.02] border border-border/50 hover:bg-foreground/[0.04] transition-colors">
-                                                <CheckCircle2 size={16} className="text-amber-400 mt-0.5 shrink-0" />
+                                                <CheckCircle2 size={16} className="text-cyan-400 mt-0.5 shrink-0" />
                                                 <span className="text-xs md:text-sm text-muted leading-relaxed font-normal">{highlight}</span>
                                             </li>
                                         ))}
@@ -88,7 +88,7 @@ export const Experience: React.FC = () => {
                                         {exp.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="px-3 py-1 rounded-lg text-xs font-mono font-medium bg-amber-500/5 text-amber-300 border border-amber-500/20"
+                                                className="px-3 py-1 rounded-lg text-xs font-mono font-medium bg-cyan-500/5 text-cyan-300 border border-cyan-500/20"
                                             >
                                                 {tech}
                                             </span>

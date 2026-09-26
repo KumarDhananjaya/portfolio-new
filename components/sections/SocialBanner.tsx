@@ -12,7 +12,7 @@ const socialLinks = [
     { Icon: FileText, href: SOCIAL_LINKS.medium, label: 'Medium', color: 'hover:text-emerald-400 border-emerald-500/20' },
     { Icon: BookOpen, href: SOCIAL_LINKS.hashnode, label: 'Hashnode', color: 'hover:text-cyan-400 border-cyan-500/20' },
     { Icon: Twitter, href: SOCIAL_LINKS.twitter, label: 'Twitter', color: 'hover:text-sky-400 border-sky-500/20' },
-    { Icon: Instagram, href: SOCIAL_LINKS.instagram, label: 'Instagram', color: 'hover:text-pink-400 border-pink-500/20' },
+    { Icon: Instagram, href: SOCIAL_LINKS.instagram, label: 'Instagram', color: 'hover:text-purple-400 border-purple-500/20' },
 ];
 
 export const SocialBanner: React.FC = () => {
@@ -27,7 +27,7 @@ export const SocialBanner: React.FC = () => {
                 >
                     <h2 className="text-xs uppercase font-mono tracking-[0.3em] text-muted mb-4 font-bold">The Ecosystem</h2>
                     <h3 className="text-3xl md:text-5xl font-black tracking-tight mb-4 text-foreground">
-                        Global Developer <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">Footprint.</span>
+                        Global Developer <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">Footprint.</span>
                     </h3>
                 </motion.div>
 

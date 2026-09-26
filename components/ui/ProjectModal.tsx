@@ -84,7 +84,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="p-4 rounded-xl border border-border/60 bg-muted/5 space-y-1.5">
                             <div className="flex items-center gap-2 text-xs font-mono font-bold text-foreground">
-                                <Zap className="w-4 h-4 text-amber-400" /> High-Concurrency & Scale
+                                <Zap className="w-4 h-4 text-cyan-400" /> High-Concurrency & Scale
                             </div>
                             <p className="text-xs text-muted">
                                 Engineered for zero-downtime, sub-millisecond execution, and high throughput state reconciliation.

@@ -11,7 +11,7 @@ const openSourceCardStyles = [
     { border: 'group-hover:border-cyan-500/50', spotlight: 'rgba(6, 182, 212, 0.22)', text: 'text-cyan-400', tag: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/25' },
     { border: 'group-hover:border-purple-500/50', spotlight: 'rgba(168, 85, 247, 0.22)', text: 'text-purple-400', tag: 'bg-purple-500/10 text-purple-300 border-purple-500/25' },
     { border: 'group-hover:border-emerald-500/50', spotlight: 'rgba(16, 185, 129, 0.22)', text: 'text-emerald-400', tag: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/25' },
-    { border: 'group-hover:border-pink-500/50', spotlight: 'rgba(236, 72, 153, 0.22)', text: 'text-pink-400', tag: 'bg-pink-500/10 text-pink-300 border-pink-500/25' },
+    { border: 'group-hover:border-indigo-500/50', spotlight: 'rgba(99, 102, 241, 0.22)', text: 'text-indigo-400', tag: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/25' },
 ];
 
 export const OpenSource: React.FC = () => {
@@ -94,7 +94,7 @@ export const OpenSource: React.FC = () => {
                                                     <GitPullRequest size={16} />
                                                 </a>
                                             </div>
-                                            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-mono font-bold border border-amber-500/25">
+                                            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-mono font-bold border border-cyan-500/25">
                                                 <Star size={12} fill="currentColor" />
                                                 <span>{item.stars}</span>
                                             </div>

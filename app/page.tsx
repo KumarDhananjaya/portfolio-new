@@ -11,10 +11,12 @@ import { Contact } from '@/components/sections/Contact';
 import { TechMarquee } from '@/components/ui/TechMarquee';
 import { Preloader } from '@/components/ui/Preloader';
 import { CustomCursor } from '@/components/ui/CustomCursor';
+import { FallingStars } from '@/components/ui/FallingStars';
 
 export default function Home() {
   return (
     <main className="min-h-screen space-y-0 relative">
+      <FallingStars />
       <Preloader />
       <CustomCursor />
       <Header />

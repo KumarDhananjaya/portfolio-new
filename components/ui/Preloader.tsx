@@ -55,7 +55,7 @@ export function Preloader() {
                                 Kumar Dhananjaya
                             </p>
                             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-100">
-                                Distributed Systems <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">& AI Engineering</span>
+                                Distributed Systems <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">& AI Engineering</span>
                             </h1>
                         </motion.div>
                     </div>
@@ -71,7 +71,7 @@ export function Preloader() {
                         {/* Progress line */}
                         <div className="w-full h-1 bg-zinc-900 rounded-full overflow-hidden">
                             <motion.div
-                                className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400"
+                                className="h-full bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-400"
                                 style={{ width: `${progress}%` }}
                                 transition={{ ease: "easeOut" }}
                             />

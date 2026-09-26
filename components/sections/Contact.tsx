@@ -75,7 +75,7 @@ export const Contact: React.FC = () => {
                             </h2>
                             <h3 className="text-4xl md:text-6xl font-black tracking-tight mb-6 text-foreground">
                                 Let's Build Something <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">
                                     Resilient & Scalable.
                                 </span>
                             </h3>

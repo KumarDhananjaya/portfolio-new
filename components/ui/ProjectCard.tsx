@@ -51,11 +51,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onSele
                 };
             default:
                 return {
-                    pill: 'bg-pink-500/15 text-pink-400 border-pink-500/30',
-                    spotlight: 'rgba(236, 72, 153, 0.22)',
-                    border: 'group-hover:border-pink-500/60',
-                    title: 'group-hover:text-pink-400',
-                    metric: 'text-pink-300 bg-pink-500/10 border-pink-500/30',
+                    pill: 'bg-indigo-500/15 text-indigo-400 border-indigo-500/30',
+                    spotlight: 'rgba(99, 102, 241, 0.22)',
+                    border: 'group-hover:border-indigo-500/60',
+                    title: 'group-hover:text-indigo-400',
+                    metric: 'text-indigo-300 bg-indigo-500/10 border-indigo-500/30',
                 };
         }
     };
