@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, FileDown } from 'lucide-react';
 import { PERSONAL_INFO } from '@/lib/constants';
 import { Button } from '@/components/ui/Button';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const navItems = [
     { name: 'Home', href: '#home' },
@@ -43,7 +44,7 @@ export const Header: React.FC = () => {
             animate={{ y: 0, x: '-50%', opacity: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-            <nav className={`relative flex items-center justify-between px-6 py-4 rounded-[2rem] transition-all duration-700 ${isScrolled ? 'glass-dark shadow-2xl' : 'glass-dark/20'
+            <nav className={`relative flex items-center justify-between px-6 py-4 rounded-[2rem] transition-all duration-700 ${isScrolled ? 'glass-dark shadow-2xl' : 'glass'
                 }`}>
                 {/* Logo */}
                 <motion.a
@@ -52,9 +53,9 @@ export const Header: React.FC = () => {
                         e.preventDefault();
                         scrollToSection('#home');
                     }}
-                    className="text-xl font-bold tracking-tighter text-white hover:text-purple-400 transition-colors duration-300"
+                    className="text-xl font-bold tracking-tighter text-foreground hover:text-accent transition-colors duration-300"
                 >
-                    Portfolio<span className="text-white/20">.</span>
+                    Portfolio<span className="text-muted">.</span>
                 </motion.a>
 
                 <div className="hidden md:flex items-center gap-4">
@@ -63,31 +64,37 @@ export const Header: React.FC = () => {
                             <li key={item.name}>
                                 <button
                                     onClick={() => scrollToSection(item.href)}
-                                    className="px-5 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all duration-300 rounded-full hover:bg-white/5"
+                                    className="px-5 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-muted hover:text-foreground transition-all duration-300 rounded-full hover:bg-foreground/5"
                                 >
                                     {item.name}
                                 </button>
                             </li>
                         ))}
                     </ul>
-                    <Button
-                        variant="primary"
-                        href={PERSONAL_INFO.resume}
-                        download="Kumar_Dhananjaya_Resume.pdf"
-                        className="py-2.5 px-6 rounded-full text-[10px] uppercase tracking-widest font-bold"
-                        icon={<FileDown size={14} />}
-                    >
-                        Resume
-                    </Button>
+                    <div className="flex items-center gap-4">
+                        <ThemeToggle />
+                        <Button
+                            variant="primary"
+                            href={PERSONAL_INFO.resume}
+                            download="Kumar_Dhananjaya_Resume.pdf"
+                            className="py-2.5 px-6 rounded-full text-[10px] uppercase tracking-widest font-bold"
+                            icon={<FileDown size={14} />}
+                        >
+                            Resume
+                        </Button>
+                    </div>
                 </div>
 
                 {/* Mobile Trigger */}
-                <button
-                    className="md:hidden glass p-3 rounded-2xl text-white/60 hover:text-white"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-                </button>
+                <div className="flex items-center gap-4 md:hidden">
+                    <ThemeToggle />
+                    <button
+                        className="glass p-3 rounded-2xl text-muted hover:text-foreground"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                    </button>
+                </div>
 
                 {/* Mobile Menu Overlay */}
                 <AnimatePresence>
@@ -102,7 +109,7 @@ export const Header: React.FC = () => {
                                 <button
                                     key={item.name}
                                     onClick={() => scrollToSection(item.href)}
-                                    className="w-full py-4 text-sm font-bold uppercase tracking-widest text-white/60 hover:text-white hover:bg-white/5 rounded-2xl transition-all"
+                                    className="w-full py-4 text-sm font-bold uppercase tracking-widest text-muted hover:text-foreground hover:bg-foreground/5 rounded-2xl transition-all"
                                 >
                                     {item.name}
                                 </button>
