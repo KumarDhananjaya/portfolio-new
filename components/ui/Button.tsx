@@ -27,15 +27,15 @@ export const Button: React.FC<ButtonProps> = ({
 
     const variants = {
         primary:
-            'bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.1)] ' +
-            'hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] active:scale-95',
+            'bg-foreground text-background shadow-lg shadow-foreground/10 ' +
+            'hover:shadow-xl hover:shadow-foreground/20 active:scale-95',
 
         secondary:
-            'glass hover:glass-dark text-white active:scale-95',
+            'glass hover:glass-dark text-foreground active:scale-95',
 
         outline:
-            'border border-white/10 text-white/80 hover:text-white hover:border-white/30 ' +
-            'hover:bg-white/5 active:scale-95',
+            'border border-border text-muted hover:text-foreground hover:border-foreground/30 ' +
+            'hover:bg-foreground/5 active:scale-95',
     };
 
     const MotionA = motion.a;
