@@ -2,17 +2,17 @@ export const PERSONAL_INFO = {
     name: "Kumar Dhananjaya",
     title: "Associate Software Engineer",
     subtitle: "Full-Stack Web & Mobile Developer | Cloud Security Enthusiast",
-    location: "Karnataka, India",
+    location: "Sydney, Australia",
     email: "kumar62.shivu@gmail.com",
     phone: "+91-9743086802",
     resume: "/resume.pdf",
     resume_view: "https://drive.google.com/file/d/13Ig5DJfxEouOIgQIRhJzXWEKFADVVJWB/view?usp=sharing",
     tagline: "Building scalable distributed systems with a focus on Zero-Trust security.",
-    bio: `Hey there! I'm Kumar Dhananjaya, an Associate Software Engineer passionate about building scalable, high-concurrency applications and secure cloud-native experiences. With expertise in the MERN stack, React Native, and DevSecOps, I focus on turning complex technical challenges into robust, production-ready solutions.
+    bio: `Hey there! I'm Kumar Dhananjaya, a software engineer currently based in Sydney, Australia, pursuing my Master of Computer Science (Advanced Entry) at The University of Sydney. I specialize in building scalable, high-concurrency distributed applications, autonomous AI agent platforms, and secure cloud-native architectures.
 
-I've architected high-availability platforms on Azure, engineered distributed systems capable of handling 100k+ RPS, and implemented comprehensive Zero-Trust security pipelines. I'm deeply interested in distributed systems, CRDTs for real-time collaboration, and the intersection of DevOps and Security.
+With industry experience architecting low-latency platforms on Azure, engineering flash-sale engines capable of handling 100k+ RPS, and implementing Zero-Trust CI/CD pipelines, I bridge the gap between academic depth and production-grade engineering.
 
-When I'm not architecting systems, you'll find me exploring new tech stacks (currently delving into Golang and NestJS), participating in national-level hackathons (2nd prize at HPE SWARM-IT!), or sharing my journey and insights through my technical blogs on Medium and Hashnode.`,
+My current focus revolves around distributed consensus, multi-agent LLM systems, real-time collaboration with CRDTs, and high-throughput backend infrastructure.`,
 };
 
 export const SOCIAL_LINKS = {
@@ -38,7 +38,7 @@ export const EXPERIENCE = [
         company: "Examic EdTech",
         position: "Associate Software Engineer",
         location: "Mysuru, India",
-        duration: "Jul 2024 – Present",
+        duration: "Jul 2024 – Feb 2026",
         highlights: [
             "Architected a low-latency Online Assessment Platform on Azure, leveraging WebSockets to achieve <150ms real-time proctoring and state synchronization.",
             "Engineered an enterprise-grade internal CMS and e-commerce engine, automating exam packaging and payment workflows to reduce operational overhead.",
@@ -269,9 +269,14 @@ export const ACHIEVEMENTS = [
 ];
 
 export const EDUCATION = {
-    institution: "Maharaja Institute of Technology Thandavapura",
-    degree: "Bachelor of Engineering in Computer Science",
-    location: "Mysuru, India",
-    duration: "2019 – 2023",
-    cgpa: "8.61/10",
+    institution: "The University of Sydney",
+    degree: "Master of Computer Science (Advanced Entry)",
+    location: "Sydney, Australia",
+    duration: "Current",
+    focus: "Distributed Systems, Artificial Intelligence & Cloud Computing",
+    highlights: [
+        "Advanced Entry candidate specializing in large-scale Distributed Computing, Advanced AI/ML Systems, and Cloud Security.",
+        "Conducting research and hands-on system architecture on high-concurrency event engines and autonomous multi-agent systems."
+    ],
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
 };
