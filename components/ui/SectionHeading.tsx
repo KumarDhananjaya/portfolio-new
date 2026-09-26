@@ -19,7 +19,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({ children, subtit
                 {children}
             </h2>
             {subtitle && (
-                <p className="text-gray-400 text-lg max-w-2xl mx-auto px-4">
+                <p className="text-muted text-lg max-w-2xl mx-auto px-4">
                     {subtitle}
                 </p>
             )}

@@ -11,7 +11,7 @@ export const Card: React.FC<CardProps> = ({ children, className = '', hover = tr
     return (
         <motion.div
             className={`
-        bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6
+        bg-foreground/5 backdrop-blur-md border border-foreground/10 rounded-xl p-6
         ${hover ? 'hover:shadow-[0_0_30px_rgba(168,85,247,0.5),0_0_60px_rgba(168,85,247,0.3)] transition-shadow duration-300' : ''}
         ${className}
       `}
