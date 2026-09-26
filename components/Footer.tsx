@@ -12,13 +12,13 @@ const socialIcons = [
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="w-full py-20 px-6 relative overflow-hidden bg-grain border-t border-white/[0.03]">
+        <footer className="w-full py-20 px-6 relative overflow-hidden bg-grain border-t border-foreground/[0.03]">
             <div className="w-full max-w-7xl mx-auto relative z-10">
                 <div className="flex flex-col items-center">
                     {/* Brand / Logo */}
                     <div className="mb-12">
-                        <h3 className="text-2xl font-bold tracking-tighter text-white">
-                            Kumar<span className="text-white/20">.</span>D
+                        <h3 className="text-2xl font-bold tracking-tighter text-foreground">
+                            Kumar<span className="text-muted">.</span>D
                         </h3>
                     </div>
 
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase()}`}
-                                className="text-xs font-bold uppercase tracking-[0.3em] text-white/30 hover:text-white transition-colors duration-300"
+                                className="text-xs font-bold uppercase tracking-[0.3em] text-muted hover:text-foreground transition-colors duration-300"
                             >
                                 {item}
                             </a>
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
                                 href={href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-500"
+                                className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-muted hover:text-foreground hover:bg-foreground/10 hover:border-foreground/20 transition-all duration-500"
                                 aria-label={label}
                             >
                                 <Icon size={20} />
@@ -52,13 +52,13 @@ export const Footer: React.FC = () => {
                     </div>
 
                     {/* Bottom Info */}
-                    <div className="w-full pt-12 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-6">
-                        <p className="text-[10px] uppercase tracking-widest text-white/20">
+                    <div className="w-full pt-12 border-t border-foreground/[0.03] flex flex-col md:flex-row justify-between items-center gap-6">
+                        <p className="text-[10px] uppercase tracking-widest text-muted/50">
                             © {new Date().getFullYear()} — Designed & Developed with Passion
                         </p>
                         <div className="flex items-center gap-2">
                             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                            <p className="text-[10px] uppercase tracking-widest text-white/40">Status: All Systems Operational</p>
+                            <p className="text-[10px] uppercase tracking-widest text-muted">Status: All Systems Operational</p>
                         </div>
                     </div>
                 </div>
