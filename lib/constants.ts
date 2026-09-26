@@ -62,6 +62,20 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "ResolveFlow",
+        description: "Autonomous Multi-Agent Dispute Resolution & Reconciliation Engine with Enterprise Human-in-the-Loop (HITL) Governance.",
+        technologies: ["Python", "LangChain", "FastAPI", "Multi-Agent", "AI/ML", "Redis"],
+        github: "https://github.com/KumarDhananjaya/ResolveFlow",
+        featured: true,
+    },
+    {
+        title: "TalentIQ AI",
+        description: "AI-powered recruitment intelligence platform for resume analysis, candidate matching, skill gap detection, and interview generation.",
+        technologies: ["Python", "FastAPI", "AI/ML", "NLP", "React", "TypeScript"],
+        github: "https://github.com/KumarDhananjaya/talentiq-ai",
+        featured: true,
+    },
+    {
         title: "FraudLens",
         description: "End-to-end Machine Learning pipeline and web dashboard for real-time credit card fraud detection using an XGBoost classifier and FastAPI.",
         technologies: ["React", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "XGBoost"],
@@ -110,6 +124,33 @@ export const PROJECTS = [
         technologies: ["NestJS", "OPA", "Kong", "Docker", "TypeScript"],
         github: "https://github.com/KumarDhananjaya/zero-trust-api-platform",
         featured: false,
+    },
+];
+
+export const OPEN_SOURCE = [
+    {
+        project: "LangChain",
+        description: "The agent engineering platform. Contributed to the core framework powering AI agent applications worldwide.",
+        github: "https://github.com/langchain-ai/langchain",
+        fork: "https://github.com/KumarDhananjaya/langchain",
+        language: "Python",
+        stars: "100k+",
+    },
+    {
+        project: "OpenTelemetry Collector Contrib",
+        description: "Contrib repository for the OpenTelemetry Collector — the vendor-agnostic observability pipeline.",
+        github: "https://github.com/open-telemetry/opentelemetry-collector-contrib",
+        fork: "https://github.com/KumarDhananjaya/opentelemetry-collector-contrib",
+        language: "Go",
+        stars: "30k+",
+    },
+    {
+        project: "Atlassian MCP Server",
+        description: "Official remote MCP server for Atlassian. Connect Jira, Confluence, and Bitbucket to AI tools using OAuth 2.1.",
+        github: "https://github.com/atlassian/atlassian-mcp-server",
+        fork: "https://github.com/KumarDhananjaya/atlassian-mcp-server",
+        language: "TypeScript",
+        stars: "5k+",
     },
 ];
 
