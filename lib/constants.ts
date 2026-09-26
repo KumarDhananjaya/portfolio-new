@@ -25,11 +25,12 @@ export const SOCIAL_LINKS = {
 };
 
 export const SKILLS = {
-    languages: ["JavaScript", "TypeScript", "Java", "Python", "Golang", "Rust", "C/C++", "Dart", "SQL"],
-    frontend: ["React", "Next.js", "React Native", "Tailwind CSS", "Framer Motion", "Three.js", "Redux"],
-    backend: ["Node.js", "Express", "NestJS", "Go-Gin", "Spring Boot", "Kafka", "Redis (Lua scripting)", "WebSockets", "gRPC"],
-    devops: ["Azure", "Docker", "Kubernetes", "NGINX", "CI/CD", "GitHub Actions", "Terraform", "Cloudflare", "OPA Gatekeeper", "HashiCorp Vault"],
-    databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Firebase"],
+    "Languages": ["TypeScript", "Python", "Golang", "JavaScript", "Java", "Rust", "C/C++", "SQL", "HCL"],
+    "AI & Multi-Agent": ["LangChain", "Multi-Agent Orchestration", "Model Context Protocol (MCP)", "RAG Systems", "Vector Search", "FastAPI", "XGBoost", "Scikit-Learn"],
+    "Backend & Distributed": ["Node.js", "Express", "NestJS", "Go-Gin", "WebSockets", "Kafka", "Redis (Lua scripting)", "gRPC", "CRDTs (Yjs)", "ClickHouse"],
+    "DevSecOps & Cloud": ["Azure", "Docker", "Kubernetes", "Helm", "Terraform", "OPA Gatekeeper", "HashiCorp Vault", "Trivy", "Falco", "GitHub Actions", "NGINX", "Zero-Trust"],
+    "Frontend & Mobile": ["React 19", "Next.js (App Router)", "React Native", "Tailwind CSS", "Framer Motion", "Redux Toolkit", "Vite", "Three.js"],
+    "Databases & Storage": ["PostgreSQL", "MongoDB", "Redis", "ClickHouse", "Supabase", "MySQL", "Firebase"],
 };
 
 export const EXPERIENCE = [
