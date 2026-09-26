@@ -13,12 +13,14 @@ import { Preloader } from '@/components/ui/Preloader';
 import { CustomCursor } from '@/components/ui/CustomCursor';
 import { FallingStars } from '@/components/ui/FallingStars';
 import { Moon } from '@/components/ui/Moon';
+import { SpacecraftNavigator } from '@/components/ui/SpacecraftNavigator';
 
 export default function Home() {
   return (
     <main className="min-h-screen space-y-0 relative">
       <FallingStars />
       <Moon />
+      <SpacecraftNavigator />
       <Preloader />
       <CustomCursor />
       <Header />
