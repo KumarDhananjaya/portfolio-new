@@ -36,10 +36,10 @@ export const Hero: React.FC = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full glass border-white/5 mb-8"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full glass border-foreground/5 mb-8"
                 >
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-xs font-medium tracking-widest uppercase text-white/50">Available for new opportunities</span>
+                    <span className="text-xs font-medium tracking-widest uppercase text-muted">Available for new opportunities</span>
                 </motion.div>
 
                 {/* Main Heading with Staggered Characters */}
@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
                         className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center leading-[0.9]"
                     >
                         {PERSONAL_INFO.name.split(' ').map((word, i) => (
-                            <span key={i} className="inline-block mr-4 last:mr-0 outline-text hover:text-white transition-all duration-700">
+                            <span key={i} className="inline-block mr-4 last:mr-0 outline-text hover:text-foreground transition-all duration-700">
                                 {word}
                             </span>
                         ))}
@@ -65,10 +65,10 @@ export const Hero: React.FC = () => {
                     transition={{ duration: 1, delay: 0.5 }}
                     className="flex flex-col items-center gap-4 mb-12"
                 >
-                    <p className="text-2xl md:text-3xl font-light text-white/70 tracking-tight text-center max-w-2xl">
+                    <p className="text-2xl md:text-3xl font-light text-muted tracking-tight text-center max-w-2xl">
                         {PERSONAL_INFO.subtitle}
                     </p>
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-foreground/20 to-transparent" />
                 </motion.div>
 
                 {/* CTA Group */}
