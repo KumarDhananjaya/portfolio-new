@@ -24,7 +24,7 @@ export const Projects: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-sm uppercase tracking-[0.4em] text-white/30 mb-4">Selected Works</h2>
+                        <h2 className="text-sm uppercase tracking-[0.4em] text-muted mb-4">Selected Works</h2>
                         <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">
                             Crafting digital <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">masterpieces.</span>
@@ -52,10 +52,10 @@ export const Projects: React.FC = () => {
                         rel="noopener noreferrer"
                         className="group flex flex-col items-center gap-4"
                     >
-                        <div className="w-16 h-16 rounded-3xl glass flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500">
+                        <div className="w-16 h-16 rounded-3xl glass flex items-center justify-center group-hover:scale-110 group-hover:bg-foreground/10 transition-all duration-500">
                             <Github size={24} />
                         </div>
-                        <span className="text-xs uppercase tracking-widest text-white/20 group-hover:text-white/50 transition-colors">View all 50+ repositories</span>
+                        <span className="text-xs uppercase tracking-widest text-muted/50 group-hover:text-muted transition-colors">View all 50+ repositories</span>
                     </a>
                 </motion.div>
             </div>
