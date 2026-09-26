@@ -8,17 +8,23 @@ import { OpenSource } from '@/components/sections/OpenSource';
 import { Blogs } from '@/components/sections/Blogs';
 import { SocialBanner } from '@/components/sections/SocialBanner';
 import { Contact } from '@/components/sections/Contact';
+import { TechMarquee } from '@/components/ui/TechMarquee';
+import { Preloader } from '@/components/ui/Preloader';
+import { CustomCursor } from '@/components/ui/CustomCursor';
 
 export default function Home() {
   return (
-    <main className="min-h-screen space-y-0">
+    <main className="min-h-screen space-y-0 relative">
+      <Preloader />
+      <CustomCursor />
       <Header />
       <Hero />
+      <TechMarquee />
       <About />
-      <Experience />
       <Projects />
       <OpenSource />
       <Blogs />
+      <Experience />
       <SocialBanner />
       <Contact />
       <Footer />
