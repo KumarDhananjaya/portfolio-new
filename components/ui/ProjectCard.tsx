@@ -37,7 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-all duration-300"
+                                    className="p-3 rounded-xl bg-foreground/5 hover:bg-foreground/10 text-muted hover:text-foreground transition-all duration-300"
                                 >
                                     <Github size={20} />
                                 </a>
@@ -47,22 +47,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-3 rounded-xl bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-all duration-300"
+                                    className="p-3 rounded-xl bg-foreground/5 hover:bg-foreground/10 text-muted hover:text-foreground transition-all duration-300"
                                 >
                                     <ExternalLink size={20} />
                                 </a>
                             )}
                         </div>
-                        <div className="text-white/20 group-hover:text-purple-400/50 transition-colors duration-500">
+                        <div className="text-foreground/20 group-hover:text-purple-400/50 transition-colors duration-500">
                             <ArrowUpRight size={32} />
                         </div>
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors duration-300 decoration-purple-500/0 decoration-2 underline-offset-8 group-hover:decoration-purple-500/50">
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-purple-500 transition-colors duration-300 decoration-purple-500/0 decoration-2 underline-offset-8 group-hover:decoration-purple-500/50">
                         {project.title}
                     </h3>
 
-                    <p className="text-muted text-lg leading-relaxed mb-6 line-clamp-3 group-hover:text-white/90 transition-colors duration-300">
+                    <p className="text-muted text-lg leading-relaxed mb-6 line-clamp-3 group-hover:text-foreground/90 transition-colors duration-300">
                         {project.description}
                     </p>
                 </div>
@@ -71,13 +71,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                     {project.technologies.slice(0, 4).map((tech) => (
                         <span
                             key={tech}
-                            className="px-4 py-1.5 rounded-full text-xs font-medium border border-white/5 bg-white/5 text-white/60 group-hover:border-purple-500/30 group-hover:text-purple-300 transition-all duration-500"
+                            className="px-4 py-1.5 rounded-full text-xs font-medium border border-foreground/5 bg-foreground/5 text-muted group-hover:border-purple-500/30 group-hover:text-purple-500 transition-all duration-500"
                         >
                             {tech}
                         </span>
                     ))}
                     {project.technologies.length > 4 && (
-                        <span className="px-3 py-1.5 text-xs text-white/30">
+                        <span className="px-3 py-1.5 text-xs text-muted/50">
                             +{project.technologies.length - 4} more
                         </span>
                     )}
