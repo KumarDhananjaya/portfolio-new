@@ -50,12 +50,12 @@ export const Contact: React.FC = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-sm uppercase tracking-[0.4em] text-white/30 mb-4">Transmission</h2>
+                            <h2 className="text-sm uppercase tracking-[0.4em] text-muted mb-4">Transmission</h2>
                             <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8">
                                 Start a <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Collaboration.</span>
                             </h3>
-                            <p className="text-white/50 text-xl leading-relaxed font-light max-w-lg">
+                            <p className="text-muted text-xl leading-relaxed font-light max-w-lg">
                                 Ready to architect secure, high-concurrency systems? Let's discuss your engineering challenges and how I can help solve them.
                             </p>
                         </motion.div>
@@ -63,14 +63,14 @@ export const Contact: React.FC = () => {
                         <div className="space-y-6">
                             <a
                                 href={`mailto:${PERSONAL_INFO.email}`}
-                                className="glass group flex items-center gap-6 p-6 rounded-[2rem] hover:bg-white/5 transition-all duration-500 max-w-md"
+                                className="glass group flex items-center gap-6 p-6 rounded-[2rem] hover:bg-foreground/5 transition-all duration-500 max-w-md"
                             >
                                 <div className="p-4 rounded-2xl bg-purple-500/10 text-purple-400 group-hover:scale-110 transition-transform">
                                     <Mail size={24} />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] uppercase tracking-widest text-white/20 mb-1 font-bold">Direct Payload</p>
-                                    <p className="text-white/80 font-medium">{PERSONAL_INFO.email}</p>
+                                    <p className="text-[10px] uppercase tracking-widest text-muted/50 mb-1 font-bold">Direct Payload</p>
+                                    <p className="text-foreground/80 font-medium">{PERSONAL_INFO.email}</p>
                                 </div>
                             </a>
                         </div>
@@ -89,37 +89,37 @@ export const Contact: React.FC = () => {
                                     <div className="w-20 h-20 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-8">
                                         <CheckCircle className="text-emerald-500" size={40} />
                                     </div>
-                                    <h4 className="text-2xl font-bold text-white mb-2">Message Received</h4>
-                                    <p className="text-white/40 uppercase tracking-widest text-xs">Awaiting synchronous response...</p>
+                                    <h4 className="text-2xl font-bold text-foreground mb-2">Message Received</h4>
+                                    <p className="text-muted uppercase tracking-widest text-xs">Awaiting synchronous response...</p>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                     <div className="space-y-2">
-                                        <label className="text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold ml-4">Full Identity</label>
+                                        <label className="text-[10px] uppercase tracking-[0.3em] text-muted/50 font-bold ml-4">Full Identity</label>
                                         <input
                                             {...register('name')}
-                                            className="w-full glass bg-transparent px-6 py-4 rounded-2xl text-white outline-none focus:border-purple-500/50 transition-colors"
+                                            className="w-full glass bg-transparent px-6 py-4 rounded-2xl text-foreground outline-none focus:border-purple-500/50 transition-colors"
                                             placeholder="Satoshi Nakamoto"
                                         />
                                         {errors.name && <p className="text-[10px] text-red-400/80 ml-4 font-bold uppercase tracking-widest">{errors.name.message}</p>}
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold ml-4">Electronic Mail</label>
+                                        <label className="text-[10px] uppercase tracking-[0.3em] text-muted/50 font-bold ml-4">Electronic Mail</label>
                                         <input
                                             {...register('email')}
-                                            className="w-full glass bg-transparent px-6 py-4 rounded-2xl text-white outline-none focus:border-cyan-500/50 transition-colors"
+                                            className="w-full glass bg-transparent px-6 py-4 rounded-2xl text-foreground outline-none focus:border-cyan-500/50 transition-colors"
                                             placeholder="satoshi@bitcoin.org"
                                         />
                                         {errors.email && <p className="text-[10px] text-red-400/80 ml-4 font-bold uppercase tracking-widest">{errors.email.message}</p>}
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-[10px] uppercase tracking-[0.3em] text-white/20 font-bold ml-4">Payload Details</label>
+                                        <label className="text-[10px] uppercase tracking-[0.3em] text-muted/50 font-bold ml-4">Payload Details</label>
                                         <textarea
                                             {...register('message')}
                                             rows={4}
-                                            className="w-full glass bg-transparent px-6 py-4 rounded-2xl text-white outline-none focus:border-purple-500/50 transition-colors resize-none"
+                                            className="w-full glass bg-transparent px-6 py-4 rounded-2xl text-foreground outline-none focus:border-purple-500/50 transition-colors resize-none"
                                             placeholder="What high-scale systems are we building today?"
                                         />
                                         {errors.message && <p className="text-[10px] text-red-400/80 ml-4 font-bold uppercase tracking-widest">{errors.message.message}</p>}
